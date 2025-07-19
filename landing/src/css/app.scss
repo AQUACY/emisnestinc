@@ -1,0 +1,391 @@
+// Import Quasar's built-in styles
+@import 'quasar/src/css/variables.sass';
+
+// Custom color variables
+:root {
+  --xpo-red: #FF0000;
+  --xpo-dark: #1D1D1D;
+  --xpo-black: #000000;
+  --xpo-gold: #FFD700;
+  --xpo-white: #FFFFFF;
+  --xpo-grey-light: #F5F5F5;
+  --xpo-grey-medium: #9E9E9E;
+  --xpo-grey-dark: #424242;
+  --text-dark: #000000;
+  --text-light: #FFFFFF;
+  --shadow-light: rgba(0, 0, 0, 0.1);
+  --shadow-medium: rgba(0, 0, 0, 0.2);
+  --shadow-dark: rgba(0, 0, 0, 0.3);
+}
+
+// Global styles
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  color: var(--text-dark);
+  background-color: var(--xpo-white);
+}
+
+// Custom utility classes
+.text-xpo-red {
+  color: var(--xpo-red) !important;
+}
+
+.text-xpo-gold {
+  color: var(--xpo-gold) !important;
+}
+
+.bg-xpo-red {
+  background-color: var(--xpo-red) !important;
+}
+
+.bg-xpo-dark {
+  background-color: var(--xpo-dark) !important;
+}
+
+.bg-xpo-black {
+  background-color: var(--xpo-black) !important;
+}
+
+.bg-xpo-gold {
+  background-color: var(--xpo-gold) !important;
+}
+
+// Button styles
+.cta-primary {
+  background-color: var(--xpo-red) !important;
+  color: var(--text-light) !important;
+  border-radius: 4px !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  box-shadow: 0 4px 8px var(--shadow-light) !important;
+  transition: all 0.3s ease !important;
+  
+  &:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 12px var(--shadow-medium) !important;
+    background-color: #cc0000 !important;
+  }
+}
+
+.cta-secondary {
+  background-color: transparent !important;
+  color: var(--text-light) !important;
+  border: 2px solid var(--text-light) !important;
+  border-radius: 4px !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  transition: all 0.3s ease !important;
+  
+  &:hover {
+    background-color: var(--text-light) !important;
+    color: var(--xpo-red) !important;
+  }
+}
+
+// Card styles
+.service-card {
+  border: none !important;
+  box-shadow: 0 2px 8px var(--shadow-light) !important;
+  transition: all 0.3s ease !important;
+  
+  &:hover {
+    box-shadow: 0 8px 16px var(--shadow-medium) !important;
+  }
+}
+
+// Navigation styles
+.nav-tab {
+  color: var(--text-light) !important;
+  font-weight: 500 !important;
+  transition: color 0.3s ease !important;
+  
+  &:hover {
+    color: var(--xpo-red) !important;
+  }
+}
+
+// Tracking input styles
+.tracking-input {
+  .q-field__control {
+    background: var(--xpo-white) !important;
+    border-radius: 4px !important;
+  }
+  
+  .q-field__native {
+    color: var(--text-dark) !important;
+  }
+}
+
+// Section styles
+.section-padding {
+  padding: 5rem 0;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.section-subtitle {
+  font-size: 1.125rem;
+  margin-bottom: 3rem;
+  color: var(--xpo-grey-medium);
+}
+
+// Hero section styles
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  filter: grayscale(50%);
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.hero-title {
+  font-size: 4rem;
+  font-weight: 900;
+  color: var(--text-light);
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-description {
+  font-size: 1.25rem;
+  color: var(--text-light);
+  margin-bottom: 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+// Award badge styles
+.award-badge {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  background: var(--xpo-black);
+  border: 2px solid var(--xpo-gold);
+  border-radius: 8px;
+  padding: 1rem;
+  max-width: 300px;
+}
+
+.badge-content {
+  text-align: center;
+}
+
+.fortune-text {
+  background: var(--xpo-white);
+  color: var(--xpo-black);
+  padding: 2px 8px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  border-radius: 2px;
+}
+
+.badge-title {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: bold;
+  color: var(--text-light);
+  line-height: 1.2;
+}
+
+.badge-year {
+  display: block;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--text-light);
+  margin-top: 0.25rem;
+}
+
+// Stats section styles
+.stat-item {
+  padding: 2rem 1rem;
+}
+
+.stat-number {
+  font-size: 3rem;
+  font-weight: 900;
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--xpo-red);
+}
+
+.stat-label {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: var(--text-light);
+}
+
+// Responsive styles
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-description {
+    font-size: 1rem;
+  }
+  
+  .award-badge {
+    position: relative;
+    top: auto;
+    right: auto;
+    margin: 0 auto 2rem auto;
+    max-width: 250px;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .stat-number {
+    font-size: 2rem;
+  }
+  
+  .section-padding {
+    padding: 3rem 0;
+  }
+}
+
+// Custom scrollbar
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--xpo-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--xpo-red);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #cc0000;
+}
+
+// Form styles
+.custom-form {
+  .q-field {
+    margin-bottom: 1.5rem;
+  }
+  
+  .q-field__control {
+    border-radius: 8px;
+  }
+  
+  .q-field--outlined .q-field__control:before {
+    border-color: var(--primary-brown);
+  }
+  
+  .q-field--focused .q-field__control:before {
+    border-color: var(--accent-yellow);
+  }
+}
+
+// Loading spinner
+.custom-loading {
+  .q-spinner {
+    color: var(--accent-yellow);
+  }
+}
+
+// Notification styles
+.q-notification {
+  border-radius: 8px;
+  box-shadow: 0 4px 12px var(--shadow-medium);
+}
+
+// Dialog styles
+.q-dialog__inner--minimized > div {
+  border-radius: 15px;
+}
+
+// Utility classes for spacing
+.mt-6 {
+  margin-top: 4rem;
+}
+
+.mb-6 {
+  margin-bottom: 4rem;
+}
+
+.py-6 {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.px-6 {
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
+// Text utilities
+.text-gradient {
+  background: linear-gradient(135deg, var(--primary-brown), var(--accent-yellow));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-shadow {
+  text-shadow: 2px 2px 4px var(--shadow-medium);
+}
+
+// Image styles
+.rounded-image {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px var(--shadow-light);
+}
+
+// Icon styles
+.feature-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--accent-yellow), #FFA500);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  margin: 0 auto 1rem;
+} 
