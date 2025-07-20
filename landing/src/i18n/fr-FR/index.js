@@ -1,15 +1,31 @@
 // French translations for DERMIQT skincare website
+import services from "./services.js";
+import privacy from "./privacy.js";
+import terms from "./terms.js";
+import cookies from "./cookies.js";
+import dataSecurity from "./dataSecurity.js";
+import news from "./news.js";
+import driver from "./driver.js";
+import mechanic from "./mechanic.js";
+import dockWorker from "./dockWorker.js";
+
 export default {
   // Navigation
   nav: {
-    menu: "MENU",
-    products: "PRODUITS",
-    about: "À PROPOS",
-    reviews: "AVIS",
-    blog: "BLOG",
+    menu: "Accueil",
+    services: "Services",
+    about: "À Propos",
+    news: "Actualités",
+    careers: "Carrières",
+    careerssub: {
+      driver: "Chauffeur",
+      dockworker: "Dockworker",
+      mechanic: "Mécanicien",
+    },
+    contact: "Contact",
     contactUs: "Nous Contacter",
     login: "Connexion",
-    shopNow: "ACHETER MAINTENANT",
+    shopNow: "Commencer",
   },
 
   // Header
@@ -754,11 +770,298 @@ export default {
     cancel: "Annuler",
   },
 
+  // About Page
+  about: {
+    hero: {
+      badge: "À Propos de Nous",
+      title: "Votre Partenaire de Confiance en Déménagement & Logistique",
+      description:
+        "Depuis plus de 15 ans, nous fournissons des services de déménagement exceptionnels avec le même soin et la même attention aux détails qui nous ont rendus prospères dès le premier jour.",
+      stats: {
+        years: "Années d'Expérience",
+        moves: "Déménagements Réussis",
+        satisfaction: "Satisfaction Client",
+      },
+    },
+    story: {
+      badge: "Notre Histoire",
+      title: "Des Débuts Humble au Leadership de l'Industrie",
+      description:
+        "Ce qui a commencé avec un seul camion et un rêve s'est transformé en l'une des entreprises de déménagement et de logistique les plus fiables de la région.",
+      timeline: {
+        founded: {
+          title: "Fondation de l'Entreprise",
+          description:
+            "Emilia Rodriguez a fondé Emi's Nest avec une mission simple : fournir des services de déménagement exceptionnels.",
+        },
+        expansion: {
+          title: "Expansion Régionale",
+          description:
+            "Expansion des opérations dans plusieurs états, construisant une réputation de fiabilité et de qualité.",
+        },
+        leadership: {
+          title: "Leadership de l'Industrie",
+          description:
+            "Aujourd'hui, nous servons des milliers de familles et d'entreprises à travers le pays.",
+        },
+      },
+      overlay: {
+        title: "Valeurs Familiales",
+        description:
+          "Nous traitons les biens de chaque client comme s'ils étaient les nôtres.",
+      },
+    },
+    values: {
+      badge: "Nos Valeurs",
+      title: "Les Principes Qui Guident Tout Ce Que Nous Faisons",
+      description:
+        "Notre engagement envers la qualité, la fiabilité et la satisfaction client est resté inchangé tout au long de notre parcours.",
+      care: {
+        title: "Soin & Respect",
+        description:
+          "Nous traitons chaque objet avec le même soin et le même respect que nous donnerions à nos propres biens, garantissant qu'aucun dommage ne survient pendant le processus de déménagement.",
+      },
+      reliability: {
+        title: "Fiabilité",
+        description:
+          "Nous comprenons l'importance du timing dans le déménagement. Notre équipe s'engage à tenir ses promesses et à respecter chaque délai.",
+      },
+      community: {
+        title: "Communauté",
+        description:
+          "Nous croyons en redonner aux communautés que nous servons et en soutenir les initiatives locales qui font une différence dans la vie des gens.",
+      },
+    },
+    team: {
+      badge: "Notre Équipe",
+      title: "Rencontrez les Professionnels Dévoués",
+      description:
+        "L'équipe passionnée derrière chaque déménagement réussi, engagée à fournir un service exceptionnel.",
+      ceo: {
+        name: "Emilia Rodriguez",
+        position: "Fondatrice & PDG",
+        description:
+          "Avec plus de 20 ans d'expérience dans l'industrie du déménagement, Emilia dirige notre entreprise avec passion et dévouement à la satisfaction client.",
+        experience: "Années d'Expérience",
+        projects: "Projets Dirigés",
+      },
+      operations: {
+        name: "Michael Chen",
+        position: "Directeur des Opérations",
+        description:
+          "Michael s'assure que chaque déménagement est exécuté parfaitement, coordonnant nos équipes et maintenant nos normes élevées de service.",
+        experience: "Années d'Expérience",
+        projects: "Projets Gérés",
+      },
+      customer: {
+        name: "Sarah Johnson",
+        position: "Relations Client",
+        description:
+          "Sarah se consacre à assurer que chaque client ait une expérience exceptionnelle, de la consultation initiale à la livraison finale.",
+        experience: "Années d'Expérience",
+        clients: "Clients Satisfaits",
+      },
+    },
+    certifications: {
+      badge: "Certifications & Prix",
+      title: "Reconnaissance de Notre Engagement envers l'Excellence",
+      description:
+        "Notre dévouement à la qualité et à la satisfaction client nous a valu de nombreuses reconnaissances et certifications de l'industrie.",
+      bbb: {
+        title: "Note A+ BBB",
+        description:
+          "Maintenu une note A+ avec le Better Business Bureau pendant plus de 10 ans, démontrant notre engagement envers des pratiques commerciales éthiques.",
+      },
+      licensed: {
+        title: "Entièrement Licencié & Assuré",
+        description:
+          "Licence complète et couverture d'assurance complète pour protéger vos biens et vous donner l'esprit tranquille.",
+      },
+      recognition: {
+        title: "Reconnaissance de l'Industrie",
+        description:
+          "De nombreux prix et reconnaissances de l'industrie pour une qualité de service exceptionnelle et une satisfaction client.",
+        award1: "Meilleure Entreprise de Déménagement 2024",
+        award2: "Prix Choix des Clients",
+      },
+    },
+    cta: {
+      badge: "Commencez Aujourd'hui",
+      title: "Prêt à Travailler Avec Nous ?",
+      description:
+        "Découvrez la différence de travailler avec une équipe qui se soucie vraiment de votre déménagement et livre des résultats exceptionnels.",
+      primaryButton: "Obtenir un Devis Gratuit",
+      secondaryButton: "Nos Services",
+    },
+  },
+
   // Messages
   messages: {
     trackingSuccess: "Informations de suivi affichées",
     searchPerformed: "Recherche effectuée pour: {query}",
     formSubmitted: "Formulaire envoyé avec succès",
     errorOccurred: "Une erreur s'est produite",
+  },
+
+  // Contact Page
+  contact: {
+    hero: {
+      title: "Contactez-Nous",
+      subtitle:
+        "Contactez notre équipe pour toute question ou pour planifier votre déménagement",
+    },
+    info: {
+      phone: {
+        title: "Téléphone",
+        main: "Bureau Principal",
+        number: "(555) 123-4567",
+        description: "Disponible 24/7 pour les urgences",
+      },
+      email: {
+        title: "E-mail",
+        main: "Demandes Générales",
+        address: "info@emisnestinc.com",
+        description: "Nous répondons dans les 2 heures",
+      },
+      office: {
+        title: "Bureau",
+        main: "Bureau Principal",
+        address: "123 Moving Way",
+        details: "Suite 100, Ville, État 12345",
+      },
+    },
+    form: {
+      title: "Envoyez-Nous un Message",
+      subtitle:
+        "Remplissez le formulaire ci-dessous et nous vous répondrons dans les 2 heures. Pour les urgences, veuillez nous appeler directement.",
+      firstName: "Prénom",
+      lastName: "Nom de Famille",
+      email: "Adresse E-mail",
+      phone: "Numéro de Téléphone",
+      subject: "Sujet",
+      message: "Message",
+      agreement: "J'accepte d'être contacté concernant ma demande",
+      submit: "Envoyer le Message",
+      subjects: {
+        general: "Demande Générale",
+        quote: "Demande de Devis",
+        service: "Question sur le Service",
+        complaint: "Plainte",
+        partnership: "Partenariat",
+        other: "Autre",
+      },
+    },
+    office: {
+      title: "Visitez Notre Bureau",
+      subtitle:
+        "Passez à notre bureau pour rencontrer notre équipe et discuter de vos besoins de déménagement en personne.",
+      hours: {
+        title: "Heures d'Ouverture",
+        weekdays: "Lundi - Vendredi",
+        weekdaysTime: "8h00 - 18h00",
+        saturday: "Samedi",
+        saturdayTime: "9h00 - 16h00",
+        sunday: "Dimanche",
+        sundayTime: "Fermé",
+      },
+      address: {
+        title: "Adresse",
+        line1: "123 Moving Way",
+        line2: "Suite 100",
+        line3: "Ville, État 12345",
+        line4: "États-Unis",
+      },
+      directions: {
+        title: "Directions",
+        description:
+          "Situé au cœur du centre-ville, notre bureau est facilement accessible par les transports publics et dispose d'un parking suffisant pour les visiteurs.",
+      },
+    },
+    map: {
+      title: "Trouvez-Nous",
+      subtitle: "Carte interactive montrant l'emplacement de notre bureau",
+      placeholder: "Carte Interactive",
+      description: "L'intégration de la carte serait ajoutée ici",
+      directions: "Obtenir les Directions",
+    },
+    emergency: {
+      title: "Contact d'Urgence",
+      subtitle: "Pour les urgences en dehors des heures de bureau",
+      line: "Ligne d'Urgence 24/7",
+      number: "(555) 911-MOVE",
+      description: "Disponible pour les urgences de déménagement",
+    },
+    social: {
+      title: "Suivez-Nous",
+      subtitle:
+        "Restez informé de nos dernières nouvelles et conseils de déménagement",
+      platforms: {
+        facebook: {
+          name: "Facebook",
+          description: "Suivez-nous pour des conseils de déménagement",
+        },
+        twitter: {
+          name: "Twitter",
+          description: "Mises à jour en temps réel",
+        },
+        instagram: {
+          name: "Instagram",
+          description: "Dans les coulisses",
+        },
+        linkedin: {
+          name: "LinkedIn",
+          description: "Mises à jour professionnelles",
+        },
+      },
+    },
+  },
+
+  // Services
+  services,
+  // Privacy Policy
+  privacy,
+  // Terms of Service
+  terms,
+  // Cookie Policy
+  cookies,
+  // Data Security Policy
+  dataSecurity,
+  // News
+  news,
+  // Driver
+  driver,
+  // Mechanic
+  mechanic,
+  // DockWorker
+  dockWorker,
+
+  // Chat translations
+  chat: {
+    title: "Vos Conversations",
+    welcomeMessage:
+      "Bonjour ! Je suis là pour vous aider avec toutes vos questions sur les services d'Emi's Nest. Comment puis-je vous assister aujourd'hui ?",
+    inputPlaceholder: "Tapez votre message...",
+    status: {
+      active: "Actif",
+      ended: "Votre conversation a pris fin.",
+    },
+    responses: {
+      tracking:
+        "Vous pouvez suivre votre expédition en visitant notre page de suivi ou en saisissant votre numéro de suivi dans la barre de recherche. Nous fournissons des mises à jour en temps réel sur l'emplacement et le statut de votre expédition.",
+      rates:
+        "Nos tarifs d'expédition varient selon la distance, le poids et le type de service. Pour un devis précis, veuillez utiliser notre calculateur de devis en ligne ou contacter directement notre équipe commerciale.",
+      deliveryTime:
+        "Les délais de livraison varient généralement de 1 à 5 jours ouvrables pour les expéditions nationales, selon le niveau de service et la destination. Les expéditions internationales peuvent prendre 7 à 14 jours ouvrables.",
+      services:
+        "Nous offrons une gamme complète de services logistiques incluant le fret LTL, le camion complet, l'expédition express, l'entreposage et les solutions de chaîne d'approvisionnement. Quel service spécifique vous intéresse ?",
+      contact:
+        "Vous pouvez nous joindre au +1 (800) 299-1700 ou nous envoyer un email à info@emisnest.com. Notre équipe de service client est disponible 24h/24 et 7j/7 pour vous assister.",
+      careers:
+        "Nous recherchons toujours des personnes talentueuses pour rejoindre notre équipe ! Consultez notre page carrières pour les postes actuels en conduite, travail sur quai, mécanique et autres postes.",
+      quote:
+        "Pour obtenir un devis, vous pouvez utiliser notre calculateur de devis en ligne, nous appeler directement ou remplir le formulaire de demande de devis sur notre site web. Nous vous fournirons un tarif compétitif rapidement.",
+      default:
+        "Merci pour votre question ! Je serais ravi de vous aider avec cela. Pourriez-vous s'il vous plaît fournir plus de détails pour que je puisse vous donner les informations les plus précises ?",
+    },
   },
 };

@@ -73,26 +73,33 @@
 
           <div class="links-column">
             <h4 class="column-title">{{ $t("footer.links.company.title") }}</h4>
-            <a href="#" class="footer-link">{{ companyLink1 }}</a>
-            <a href="#" class="footer-link">{{ companyLink2 }}</a>
-            <a href="#" class="footer-link">{{ companyLink3 }}</a>
-            <a href="#" class="footer-link">{{ companyLink4 }}</a>
+            <a href="/about" class="footer-link">{{ companyLink1 }}</a>
+            <a href="/careers/driver" class="footer-link">{{ companyLink2 }}</a>
+            <a href="/news" class="footer-link">{{ companyLink3 }}</a>
           </div>
 
           <div class="links-column">
             <h4 class="column-title">{{ $t("footer.links.support.title") }}</h4>
-            <a href="#" class="footer-link">{{ supportLink1 }}</a>
-            <a href="#" class="footer-link">{{ supportLink2 }}</a>
-            <a href="#" class="footer-link">{{ supportLink3 }}</a>
-            <a href="#" class="footer-link">{{ supportLink4 }}</a>
+            <a href="/customer-service" class="footer-link">{{
+              supportLink3
+            }}</a>
+            <a href="/contact" class="footer-link">{{ supportLink4 }}</a>
           </div>
 
           <div class="links-column">
             <h4 class="column-title">{{ $t("footer.links.legal.title") }}</h4>
-            <a href="#" class="footer-link">{{ legalLink1 }}</a>
-            <a href="#" class="footer-link">{{ legalLink2 }}</a>
-            <a href="#" class="footer-link">{{ legalLink3 }}</a>
-            <a href="#" class="footer-link">{{ legalLink4 }}</a>
+            <a href="/legal/privacy-policy" class="footer-link">{{
+              legalLink1
+            }}</a>
+            <a href="/legal/terms-of-service" class="footer-link">{{
+              legalLink2
+            }}</a>
+            <a href="/legal/data-security" class="footer-link">{{
+              legalLink3
+            }}</a>
+            <a href="/legal/cookie-policy" class="footer-link">{{
+              legalLink4
+            }}</a>
           </div>
         </div>
 
@@ -176,15 +183,12 @@
 
     <!-- Floating Action Buttons -->
     <div class="floating-actions">
-      <div class="chat-bubble" @click="openChat">
-        <q-icon name="chat" size="1.5rem" />
-        <span class="chat-label">{{ $t("footer.floating.chat") }}</span>
-      </div>
+      <!-- Chat bubble removed - now handled by dedicated Chat component -->
 
-      <div class="quote-bubble" @click="requestQuote">
+      <!-- <div class="quote-bubble" @click="requestQuote">
         <q-icon name="calculate" size="1.5rem" />
         <span class="quote-label">{{ $t("footer.floating.quote") }}</span>
-      </div>
+      </div> -->
     </div>
   </footer>
 </template>
@@ -267,13 +271,7 @@ export default {
       }
     };
 
-    const openChat = () => {
-      $q.notify({
-        type: "info",
-        message: "Chat support will open",
-        position: "top",
-      });
-    };
+    // Chat functionality moved to dedicated Chat component
 
     const requestQuote = () => {
       $q.notify({
@@ -316,7 +314,6 @@ export default {
       newsletterBenefit2,
       newsletterBenefit3,
       subscribeNewsletter,
-      openChat,
       requestQuote,
       scrollToTop,
     };

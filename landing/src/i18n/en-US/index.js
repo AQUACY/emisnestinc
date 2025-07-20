@@ -1,12 +1,28 @@
 // English translations for DERMIQT skincare website
+import services from "./services.js";
+import privacy from "./privacy.js";
+import terms from "./terms.js";
+import cookies from "./cookies.js";
+import dataSecurity from "./dataSecurity.js";
+import news from "./news.js";
+import driver from "./driver.js";
+import mechanic from "./mechanic.js";
+import dockWorker from "./dockWorker.js";
+
 export default {
   // Navigation
   nav: {
     menu: "Home",
-    products: "Products",
+    services: "Services",
     about: "About",
-    reviews: "Reviews",
-    blog: "Blog",
+    news: "News",
+    careers: "Careers",
+    careerssub: {
+      driver: "Driver",
+      dockworker: "Dockworker",
+      mechanic: "Mechanic",
+    },
+    contact: "Contact",
     contactUs: "Contact Us",
     login: "Login",
     shopNow: "Get Started",
@@ -640,8 +656,8 @@ export default {
           "Track Shipment",
           "Submit Claim",
           "Customer Service",
-          "Help Center",
           "Contact Us",
+          "Help Center",
           "Agent Portal",
         ],
       },
@@ -753,11 +769,297 @@ export default {
     cancel: "Cancel",
   },
 
+  // About Page
+  about: {
+    hero: {
+      badge: "About Us",
+      title: "Your Trusted Partner in Moving & Logistics",
+      description:
+        "For over 15 years, we've been delivering exceptional moving services with the same care and attention to detail that made us successful from day one.",
+      stats: {
+        years: "Years Experience",
+        moves: "Successful Moves",
+        satisfaction: "Customer Satisfaction",
+      },
+    },
+    story: {
+      badge: "Our Story",
+      title: "From Humble Beginnings to Industry Leadership",
+      description:
+        "What started with a single truck and a dream has grown into one of the region's most trusted moving and logistics companies.",
+      timeline: {
+        founded: {
+          title: "Company Founded",
+          description:
+            "Emilia Rodriguez started Emi's Nest with a simple mission: to provide exceptional moving services.",
+        },
+        expansion: {
+          title: "Regional Expansion",
+          description:
+            "Expanded operations across multiple states, building a reputation for reliability and quality.",
+        },
+        leadership: {
+          title: "Industry Leadership",
+          description:
+            "Today, we serve thousands of families and businesses across the country.",
+        },
+      },
+      overlay: {
+        title: "Family Values",
+        description:
+          "We treat every client's belongings as if they were our own.",
+      },
+    },
+    values: {
+      badge: "Our Values",
+      title: "The Principles That Guide Everything We Do",
+      description:
+        "Our commitment to quality, reliability, and customer satisfaction has remained unchanged throughout our journey.",
+      care: {
+        title: "Care & Respect",
+        description:
+          "We treat every item with the same care and respect we would give our own belongings, ensuring nothing is damaged during the moving process.",
+      },
+      reliability: {
+        title: "Reliability",
+        description:
+          "We understand the importance of timing in moving. Our team is committed to delivering on our promises and meeting every deadline.",
+      },
+      community: {
+        title: "Community",
+        description:
+          "We believe in giving back to the communities we serve and supporting local initiatives that make a difference in people's lives.",
+      },
+    },
+    team: {
+      badge: "Our Team",
+      title: "Meet the Dedicated Professionals",
+      description:
+        "The passionate team behind every successful move, committed to delivering exceptional service.",
+      ceo: {
+        name: "Emilia Rodriguez",
+        position: "Founder & CEO",
+        description:
+          "With over 20 years of experience in the moving industry, Emilia leads our company with passion and dedication to customer satisfaction.",
+        experience: "Years Experience",
+        projects: "Projects Led",
+      },
+      operations: {
+        name: "Michael Chen",
+        position: "Operations Manager",
+        description:
+          "Michael ensures every move is executed flawlessly, coordinating our teams and maintaining our high standards of service.",
+        experience: "Years Experience",
+        projects: "Projects Managed",
+      },
+      customer: {
+        name: "Sarah Johnson",
+        position: "Customer Relations",
+        description:
+          "Sarah is dedicated to ensuring every client has an exceptional experience, from initial consultation to final delivery.",
+        experience: "Years Experience",
+        clients: "Happy Clients",
+      },
+    },
+    certifications: {
+      badge: "Certifications & Awards",
+      title: "Recognition of Our Commitment to Excellence",
+      description:
+        "Our dedication to quality and customer satisfaction has earned us numerous industry recognitions and certifications.",
+      bbb: {
+        title: "BBB A+ Rating",
+        description:
+          "Maintained an A+ rating with the Better Business Bureau for over 10 years, demonstrating our commitment to ethical business practices.",
+      },
+      licensed: {
+        title: "Fully Licensed & Insured",
+        description:
+          "Complete licensing and comprehensive insurance coverage to protect your belongings and provide peace of mind.",
+      },
+      recognition: {
+        title: "Industry Recognition",
+        description:
+          "Multiple industry awards and recognition for outstanding service quality and customer satisfaction.",
+        award1: "Best Moving Company 2024",
+        award2: "Customer Choice Award",
+      },
+    },
+    cta: {
+      badge: "Get Started Today",
+      title: "Ready to Work With Us?",
+      description:
+        "Experience the difference of working with a team that truly cares about your move and delivers exceptional results.",
+      primaryButton: "Get Free Quote",
+      secondaryButton: "Our Services",
+    },
+  },
+
   // Messages
   messages: {
     trackingSuccess: "Tracking information will be displayed",
     searchPerformed: "Searching for: {query}",
     formSubmitted: "Form submitted successfully",
     errorOccurred: "An error occurred",
+  },
+
+  // Contact Page
+  contact: {
+    hero: {
+      title: "Contact Us",
+      subtitle:
+        "Get in touch with our team for any questions or to schedule your move",
+    },
+    info: {
+      phone: {
+        title: "Phone",
+        main: "Main Office",
+        number: "(555) 123-4567",
+        description: "Available 24/7 for emergencies",
+      },
+      email: {
+        title: "Email",
+        main: "General Inquiries",
+        address: "info@emisnestinc.com",
+        description: "We respond within 2 hours",
+      },
+      office: {
+        title: "Office",
+        main: "Main Office",
+        address: "123 Moving Way",
+        details: "Suite 100, City, State 12345",
+      },
+    },
+    form: {
+      title: "Send Us a Message",
+      subtitle:
+        "Fill out the form below and we'll get back to you within 2 hours. For urgent matters, please call us directly.",
+      firstName: "First Name",
+      lastName: "Last Name",
+      email: "Email Address",
+      phone: "Phone Number",
+      subject: "Subject",
+      message: "Message",
+      agreement: "I agree to be contacted regarding my inquiry",
+      submit: "Send Message",
+      subjects: {
+        general: "General Inquiry",
+        quote: "Quote Request",
+        service: "Service Question",
+        complaint: "Complaint",
+        partnership: "Partnership",
+        other: "Other",
+      },
+    },
+    office: {
+      title: "Visit Our Office",
+      subtitle:
+        "Stop by our office to meet our team and discuss your moving needs in person.",
+      hours: {
+        title: "Office Hours",
+        weekdays: "Monday - Friday",
+        weekdaysTime: "8:00 AM - 6:00 PM",
+        saturday: "Saturday",
+        saturdayTime: "9:00 AM - 4:00 PM",
+        sunday: "Sunday",
+        sundayTime: "Closed",
+      },
+      address: {
+        title: "Address",
+        line1: "123 Moving Way",
+        line2: "Suite 100",
+        line3: "City, State 12345",
+        line4: "United States",
+      },
+      directions: {
+        title: "Directions",
+        description:
+          "Located in the heart of downtown, our office is easily accessible by public transportation and has ample parking available for visitors.",
+      },
+    },
+    map: {
+      title: "Find Us",
+      subtitle: "Interactive map showing our office location",
+      placeholder: "Interactive Map",
+      description: "Map integration would be added here",
+      directions: "Get Directions",
+    },
+    emergency: {
+      title: "Emergency Contact",
+      subtitle: "For urgent matters outside of business hours",
+      line: "24/7 Emergency Line",
+      number: "(555) 911-MOVE",
+      description: "Available for urgent moving emergencies",
+    },
+    social: {
+      title: "Follow Us",
+      subtitle: "Stay updated with our latest news and moving tips",
+      platforms: {
+        facebook: {
+          name: "Facebook",
+          description: "Follow us for moving tips",
+        },
+        twitter: {
+          name: "Twitter",
+          description: "Real-time updates",
+        },
+        instagram: {
+          name: "Instagram",
+          description: "Behind the scenes",
+        },
+        linkedin: {
+          name: "LinkedIn",
+          description: "Professional updates",
+        },
+      },
+    },
+  },
+
+  // Services
+  services,
+  // Privacy Policy
+  privacy,
+  // Terms of Service
+  terms,
+  // Cookie Policy
+  cookies,
+  // Data Security Policy
+  dataSecurity,
+  // News
+  news,
+  // Driver
+  driver,
+  // Mechanic
+  mechanic,
+  // DockWorker
+  dockWorker,
+
+  // Chat translations
+  chat: {
+    title: "Your Chats",
+    welcomeMessage:
+      "Hello! I'm here to help you with any questions about Emi's Nest services. How can I assist you today?",
+    inputPlaceholder: "Type your message...",
+    status: {
+      active: "Active",
+      ended: "Your chat has ended.",
+    },
+    responses: {
+      tracking:
+        "You can track your shipment by visiting our tracking page or entering your tracking number in the search bar. We provide real-time updates on your shipment's location and status.",
+      rates:
+        "Our shipping rates vary based on distance, weight, and service type. For an accurate quote, please use our online quote calculator or contact our sales team directly.",
+      deliveryTime:
+        "Delivery times typically range from 1-5 business days for domestic shipments, depending on the service level and destination. International shipments may take 7-14 business days.",
+      services:
+        "We offer a comprehensive range of logistics services including LTL freight, full truckload, expedited shipping, warehousing, and supply chain solutions. What specific service are you interested in?",
+      contact:
+        "You can reach us at +1 (800) 299-1700 or email us at info@emisnest.com. Our customer service team is available 24/7 to assist you.",
+      careers:
+        "We're always looking for talented individuals to join our team! Check out our careers page for current openings in driving, dock work, mechanics, and other positions.",
+      quote:
+        "To get a quote, you can use our online quote calculator, call us directly, or fill out the quote request form on our website. We'll provide you with a competitive rate quickly.",
+      default:
+        "Thank you for your question! I'd be happy to help you with that. Could you please provide more details so I can give you the most accurate information?",
+    },
   },
 };

@@ -22,16 +22,41 @@
           <!-- Desktop Navigation -->
           <div class="nav-desktop">
             <div class="nav-menu">
-              <div class="nav-item" @click="scrollToSection('about')">
+              <div class="nav-item" @click="goHome">
+                <span class="nav-link">{{ $t("nav.menu") }}</span>
+                <div class="nav-indicator"></div>
+              </div>
+              <div class="nav-item" @click="goAbout">
                 <span class="nav-link">{{ $t("nav.about") }}</span>
                 <div class="nav-indicator"></div>
               </div>
-              <div class="nav-item" @click="scrollToSection('products')">
-                <span class="nav-link">{{ $t("nav.products") }}</span>
+              <div class="nav-item" @click="goServices">
+                <span class="nav-link">{{ $t("nav.services") }}</span>
                 <div class="nav-indicator"></div>
               </div>
-              <div class="nav-item" @click="scrollToSection('reviews')">
-                <span class="nav-link">{{ $t("nav.reviews") }}</span>
+              <div class="nav-item careers-dropdown" @click="toggleCareersMenu">
+                <span class="nav-link">{{ $t("nav.careers") }}</span>
+                <q-icon name="expand_more" class="careers-arrow" />
+                <div class="nav-indicator"></div>
+
+                <!-- Careers Submenu -->
+                <div v-if="showCareersMenu" class="careers-submenu">
+                  <div class="submenu-item" @click="goToCareer('driver')">
+                    <q-icon name="local_shipping" class="submenu-icon" />
+                    <span>{{ $t("nav.careerssub.driver") }}</span>
+                  </div>
+                  <div class="submenu-item" @click="goToCareer('dockworker')">
+                    <q-icon name="work" class="submenu-icon" />
+                    <span>{{ $t("nav.careerssub.dockworker") }}</span>
+                  </div>
+                  <div class="submenu-item" @click="goToCareer('mechanic')">
+                    <q-icon name="build" class="submenu-icon" />
+                    <span>{{ $t("nav.careerssub.mechanic") }}</span>
+                  </div>
+                </div>
+              </div>
+              <div class="nav-item" @click="goNews">
+                <span class="nav-link">{{ $t("nav.news") }}</span>
                 <div class="nav-indicator"></div>
               </div>
             </div>
@@ -188,6 +213,56 @@
             </q-item-section>
             <q-item-section>{{ $t("nav.about") }}</q-item-section>
           </q-item>
+
+          <!-- Mobile Careers Submenu -->
+          <q-expansion-item
+            icon="work"
+            :label="$t('nav.careers')"
+            class="mobile-nav-item careers-expansion"
+            header-class="careers-expansion-header"
+          >
+            <q-list class="mobile-careers-submenu">
+              <q-item
+                clickable
+                v-ripple
+                @click="goToCareer('driver')"
+                class="mobile-submenu-item"
+              >
+                <q-item-section avatar>
+                  <q-icon name="local_shipping" color="var(--dermiqt-yellow)" />
+                </q-item-section>
+                <q-item-section>{{
+                  $t("nav.careerssub.driver")
+                }}</q-item-section>
+              </q-item>
+              <q-item
+                clickable
+                v-ripple
+                @click="goToCareer('dockworker')"
+                class="mobile-submenu-item"
+              >
+                <q-item-section avatar>
+                  <q-icon name="work" color="var(--dermiqt-yellow)" />
+                </q-item-section>
+                <q-item-section>{{
+                  $t("nav.careerssub.dockworker")
+                }}</q-item-section>
+              </q-item>
+              <q-item
+                clickable
+                v-ripple
+                @click="goToCareer('mechanic')"
+                class="mobile-submenu-item"
+              >
+                <q-item-section avatar>
+                  <q-icon name="build" color="var(--dermiqt-yellow)" />
+                </q-item-section>
+                <q-item-section>{{
+                  $t("nav.careerssub.mechanic")
+                }}</q-item-section>
+              </q-item>
+            </q-list>
+          </q-expansion-item>
           <q-item
             clickable
             v-ripple
@@ -226,6 +301,9 @@
         <router-view />
       </q-page-container>
     </q-layout>
+
+    <!-- Chat Widget -->
+    <ChatWidget />
   </div>
 </template>
 
@@ -233,18 +311,25 @@
 import { ref, computed, onMounted } from "vue";
 import { useQuasar } from "quasar";
 import { useI18n } from "vue-i18n";
+import { useRouter } from "vue-router";
+import ChatWidget from "../components/Chat.vue";
 
 export default {
   name: "App",
+  components: {
+    ChatWidget,
+  },
   setup() {
     const $q = useQuasar();
     const { t, locale } = useI18n();
+    const router = useRouter();
 
     const tab = ref("home");
     const mobileMenuOpen = ref(false);
     const trackingNumber = ref("");
     const showSearch = ref(false);
     const searchQuery = ref("");
+    const showCareersMenu = ref(false);
 
     // Language management
     const currentLocale = computed(() => locale.value);
@@ -268,10 +353,47 @@ export default {
       if (savedLocale && (savedLocale === "en-US" || savedLocale === "fr-FR")) {
         locale.value = savedLocale;
       }
+
+      // Set default page title if not already set by router
+      if (!document.title || document.title === "Emi's Nest") {
+        document.title = "Emi's Nest - World-Class LTL Solutions";
+      }
     });
 
     const toggleMobileMenu = () => {
       mobileMenuOpen.value = !mobileMenuOpen.value;
+    };
+
+    const goHome = () => {
+      router.push("/");
+    };
+
+    const goAbout = () => {
+      router.push("/about");
+    };
+
+    const goServices = () => {
+      router.push("/services");
+    };
+
+    const goNews = () => {
+      router.push("/news");
+    };
+
+    const toggleCareersMenu = () => {
+      showCareersMenu.value = !showCareersMenu.value;
+    };
+
+    const goToCareer = (careerType) => {
+      // Close the submenu
+      showCareersMenu.value = false;
+
+      // Navigate to the specific career page or section
+      // You can customize this based on your routing structure
+      router.push(`/careers/${careerType}`);
+
+      // Or if you want to scroll to a section instead:
+      // scrollToSection(`careers-${careerType}`);
     };
 
     const scrollToSection = (sectionId) => {
@@ -331,9 +453,16 @@ export default {
       trackingNumber,
       showSearch,
       searchQuery,
+      showCareersMenu,
       currentLocale,
       changeLanguage,
       toggleMobileMenu,
+      goHome,
+      goAbout,
+      goServices,
+      goNews,
+      toggleCareersMenu,
+      goToCareer,
       scrollToSection,
       toggleSearch,
       closeSearch,
@@ -457,6 +586,65 @@ export default {
 
 .nav-item:hover .nav-indicator {
   width: 100%;
+}
+
+/* Careers Dropdown */
+.careers-dropdown {
+  position: relative;
+}
+
+.careers-arrow {
+  margin-left: 0.5rem;
+  font-size: 1rem;
+  color: var(--dermiqt-white);
+  transition: transform 0.3s ease;
+}
+
+.careers-dropdown:hover .careers-arrow {
+  transform: rotate(180deg);
+}
+
+.careers-submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--dermiqt-dark-text);
+  border: 1px solid rgba(193, 120, 23, 0.2);
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  min-width: 200px;
+  z-index: 1000;
+  margin-top: 0.5rem;
+  animation: slideDown 0.3s ease-out;
+}
+
+.submenu-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  color: var(--dermiqt-white);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid rgba(193, 120, 23, 0.1);
+}
+
+.submenu-item:last-child {
+  border-bottom: none;
+}
+
+.submenu-item:hover {
+  background: rgba(193, 120, 23, 0.1);
+  color: var(--dermiqt-yellow);
+}
+
+.submenu-icon {
+  font-size: 1.25rem;
+  color: var(--dermiqt-yellow);
+}
+
+.submenu-item:hover .submenu-icon {
+  color: var(--dermiqt-yellow);
 }
 
 /* Action Buttons */
@@ -614,6 +802,33 @@ export default {
 }
 
 .mobile-nav-item:hover {
+  background: rgba(193, 120, 23, 0.1);
+}
+
+/* Mobile Careers Submenu */
+.careers-expansion {
+  color: var(--dermiqt-white);
+}
+
+.careers-expansion-header {
+  color: var(--dermiqt-white);
+  background: transparent;
+}
+
+.mobile-careers-submenu {
+  background: rgba(193, 120, 23, 0.05);
+  margin: 0 1rem;
+  border-radius: 8px;
+}
+
+.mobile-submenu-item {
+  color: var(--dermiqt-white);
+  transition: background 0.3s ease;
+  margin: 0.25rem 0;
+  border-radius: 6px;
+}
+
+.mobile-submenu-item:hover {
   background: rgba(193, 120, 23, 0.1);
 }
 
