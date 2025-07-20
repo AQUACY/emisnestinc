@@ -1,0 +1,173 @@
+// DERMIQT Skincare Rebrand Color System
+// This file contains all color variables for the rebrand
+
+:root {
+  // Primary Colors
+  --dermiqt-dark-brown: #3c2a21; // Deep dark brown for headers and dark sections
+  --dermiqt-light-beige: #f5f1ed; // Light beige for light sections
+  --dermiqt-yellow: #d4af37; // Muted yellow/gold for CTAs
+  --dermiqt-orange: #c17817; // Earthy orange/terracotta for accents
+
+  // Text Colors
+  --dermiqt-white: #ffffff; // White text on dark backgrounds
+  --dermiqt-dark-text: #2c1810; // Dark brown text on light backgrounds
+
+  // Accent Colors
+  --dermiqt-red: #8b4513; // Muted red/dark orange for logo
+  --dermiqt-green: #6b8e23; // Green for natural elements
+
+  // Additional Utility Colors
+  --dermiqt-light-gray: #e8e4e0; // Light gray for subtle backgrounds
+  --dermiqt-medium-gray: #a8a4a0; // Medium gray for secondary text
+  --dermiqt-dark-gray: #5a4a3a; // Dark gray for borders and shadows
+
+  // Hover and Interactive States
+  --dermiqt-yellow-hover: #b8942a; // Darker yellow for hover states
+  --dermiqt-orange-hover: #a66814; // Darker orange for hover states
+
+  // Transparency Variants
+  --dermiqt-dark-brown-90: rgba(60, 42, 33, 0.9);
+  --dermiqt-dark-brown-80: rgba(60, 42, 33, 0.8);
+  --dermiqt-yellow-90: rgba(212, 175, 55, 0.9);
+  --dermiqt-orange-90: rgba(193, 120, 23, 0.9);
+}
+
+// Utility Classes for Quick Color Application
+.bg-dermiqt-dark {
+  background-color: var(--dermiqt-dark-brown) !important;
+}
+
+.bg-dermiqt-light {
+  background-color: var(--dermiqt-light-beige) !important;
+}
+
+.bg-dermiqt-yellow {
+  background-color: var(--dermiqt-yellow) !important;
+}
+
+.bg-dermiqt-orange {
+  background-color: var(--dermiqt-orange) !important;
+}
+
+.text-dermiqt-white {
+  color: var(--dermiqt-white) !important;
+}
+
+.text-dermiqt-dark {
+  color: var(--dermiqt-dark-text) !important;
+}
+
+.text-dermiqt-red {
+  color: var(--dermiqt-red) !important;
+}
+
+.text-dermiqt-yellow {
+  color: var(--dermiqt-yellow) !important;
+}
+
+.text-dermiqt-orange {
+  color: var(--dermiqt-orange) !important;
+}
+
+// Button Styles
+.btn-dermiqt-primary {
+  background-color: var(--dermiqt-yellow) !important;
+  color: var(--dermiqt-dark-text) !important;
+  border: none !important;
+  font-weight: bold !important;
+  text-transform: uppercase !important;
+  transition: all 0.3s ease !important;
+}
+
+.btn-dermiqt-primary:hover {
+  background-color: var(--dermiqt-yellow-hover) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 8px rgba(60, 42, 33, 0.2) !important;
+}
+
+.btn-dermiqt-secondary {
+  background-color: var(--dermiqt-white) !important;
+  color: var(--dermiqt-dark-text) !important;
+  border: 2px solid var(--dermiqt-dark-brown) !important;
+  font-weight: bold !important;
+  transition: all 0.3s ease !important;
+}
+
+.btn-dermiqt-secondary:hover {
+  background-color: var(--dermiqt-dark-brown) !important;
+  color: var(--dermiqt-white) !important;
+}
+
+// Form Input Styles
+.input-dermiqt {
+  background-color: var(--dermiqt-light-beige) !important;
+  border: 2px solid var(--dermiqt-light-gray) !important;
+  color: var(--dermiqt-dark-text) !important;
+  border-radius: 8px !important;
+  transition: all 0.3s ease !important;
+}
+
+.input-dermiqt:focus {
+  border-color: var(--dermiqt-orange) !important;
+  box-shadow: 0 0 0 3px rgba(193, 120, 23, 0.1) !important;
+}
+
+// Card Styles
+.card-dermiqt {
+  background-color: var(--dermiqt-white) !important;
+  border: 1px solid var(--dermiqt-light-gray) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 2px 8px rgba(60, 42, 33, 0.1) !important;
+  transition: all 0.3s ease !important;
+}
+
+.card-dermiqt:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 8px 24px rgba(60, 42, 33, 0.15) !important;
+}
+
+// Section Alternating Backgrounds
+.section-dermiqt-dark {
+  background-color: var(--dermiqt-dark-brown) !important;
+  color: var(--dermiqt-white) !important;
+}
+
+.section-dermiqt-light {
+  background-color: var(--dermiqt-light-beige) !important;
+  color: var(--dermiqt-dark-text) !important;
+}
+
+// Typography Enhancements
+.text-dermiqt-heading {
+  font-weight: bold !important;
+  font-family: "Inter", "Roboto", sans-serif !important;
+  letter-spacing: -0.02em !important;
+}
+
+.text-dermiqt-body {
+  font-family: "Inter", "Roboto", sans-serif !important;
+  line-height: 1.6 !important;
+}
+
+// Natural Texture Overlays
+.texture-dermiqt {
+  background-image: radial-gradient(
+      circle at 20% 80%,
+      rgba(212, 175, 55, 0.1) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(193, 120, 23, 0.1) 0%,
+      transparent 50%
+    );
+}
+
+// Responsive Color Adjustments
+@media (max-width: 768px) {
+  :root {
+    // Slightly adjust colors for mobile for better contrast
+    --dermiqt-dark-brown: #2a1e18;
+    --dermiqt-light-beige: #f8f4f0;
+  }
+}

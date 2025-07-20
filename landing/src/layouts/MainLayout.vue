@@ -2,69 +2,111 @@
   <div id="app">
     <q-layout view="hHh lpR fFf">
       <!-- Top Navigation Bar -->
-      <q-header elevated class="bg-white text-dark">
-        <q-toolbar class="q-px-md">
-          <!-- Logo -->
-          <q-toolbar-title>
-            <div class="row items-center">
-              <span class="text-h4 text-weight-bold text-red">XPO</span>
-            </div>
-          </q-toolbar-title>
-
-          <!-- Desktop Navigation -->
-          <div class="gt-sm q-ml-lg">
-            <div class="row items-center q-gutter-md">
-              <div class="nav-item">
-                <span class="nav-link">Ship, Track, Quote</span>
-                <q-icon name="expand_more" size="xs" class="q-ml-xs" />
-              </div>
-              <div class="nav-item">
-                <span class="nav-link">Services</span>
-                <q-icon name="expand_more" size="xs" class="q-ml-xs" />
-              </div>
-              <div class="nav-item">
-                <span class="nav-link">Careers</span>
-                <q-icon name="expand_more" size="xs" class="q-ml-xs" />
-              </div>
-              <div class="nav-item">
-                <span class="nav-link">Company</span>
-                <q-icon name="expand_more" size="xs" class="q-ml-xs" />
-              </div>
-              <div class="nav-item">
-                <span class="nav-link">Request a Quote</span>
-                <q-icon name="arrow_forward" size="xs" class="q-ml-xs" />
+      <q-header elevated class="header-modern">
+        <q-toolbar class="toolbar-modern">
+          <!-- Logo Section -->
+          <div class="logo-section">
+            <div class="logo-container">
+              <img
+                src="../assets/emisnest-logo.png"
+                alt="Emi's Nest"
+                class="logo-image"
+              />
+              <div class="brand-text">
+                <h1 class="brand-name">{{ $t("header.brand.name") }}</h1>
+                <p class="brand-tagline">{{ $t("header.brand.tagline") }}</p>
               </div>
             </div>
           </div>
 
-          <!-- Utility Links -->
-          <div class="gt-sm q-ml-lg">
-            <q-btn flat label="Contact Us" class="nav-link-btn" />
-            <q-btn flat label="Login" class="nav-link-btn q-ml-md" />
+          <!-- Desktop Navigation -->
+          <div class="nav-desktop">
+            <div class="nav-menu">
+              <div class="nav-item" @click="scrollToSection('about')">
+                <span class="nav-link">{{ $t("nav.about") }}</span>
+                <div class="nav-indicator"></div>
+              </div>
+              <div class="nav-item" @click="scrollToSection('products')">
+                <span class="nav-link">{{ $t("nav.products") }}</span>
+                <div class="nav-indicator"></div>
+              </div>
+              <div class="nav-item" @click="scrollToSection('reviews')">
+                <span class="nav-link">{{ $t("nav.reviews") }}</span>
+                <div class="nav-indicator"></div>
+              </div>
+            </div>
           </div>
 
           <!-- Action Buttons -->
-          <div class="gt-sm q-ml-lg">
-            <q-btn flat round icon="language" class="bg-grey-4 text-dark">
-              <q-menu>
-                <q-list>
-                  <q-item clickable v-ripple to="/">English</q-item>
-                  <q-item clickable v-ripple to="/">French</q-item>
-                  <q-item clickable v-ripple to="/">Spanish</q-item>
+          <div class="nav-actions">
+            <div
+              class="nav-item nav-item-contact"
+              @click="scrollToSection('contactUs')"
+            >
+              <span class="nav-link">{{ $t("nav.contactUs") }}</span>
+              <div class="nav-indicator"></div>
+            </div>
+            <!-- Language Switcher -->
+            <div class="language-switcher">
+              <q-btn-dropdown
+                flat
+                round
+                :icon="currentLocale === 'en-US' ? 'flag' : 'flag'"
+                class="action-btn lang-btn"
+                color="var(--dermiqt-yellow)"
+                text-color="var(--dermiqt-dark-text)"
+              >
+                <q-list class="lang-menu">
+                  <q-item
+                    clickable
+                    v-ripple
+                    @click="changeLanguage('en-US')"
+                    class="lang-item"
+                  >
+                    <q-item-section avatar>
+                      <q-icon name="flag" color="var(--dermiqt-yellow)" />
+                    </q-item-section>
+                    <q-item-section>{{
+                      $t("header.language.english")
+                    }}</q-item-section>
+                    <q-item-section side v-if="currentLocale === 'en-US'">
+                      <q-icon name="check" color="var(--dermiqt-yellow)" />
+                    </q-item-section>
+                  </q-item>
+                  <q-item
+                    clickable
+                    v-ripple
+                    @click="changeLanguage('fr-FR')"
+                    class="lang-item"
+                  >
+                    <q-item-section avatar>
+                      <q-icon name="flag" color="var(--dermiqt-yellow)" />
+                    </q-item-section>
+                    <q-item-section>{{
+                      $t("header.language.french")
+                    }}</q-item-section>
+                    <q-item-section side v-if="currentLocale === 'fr-FR'">
+                      <q-icon name="check" color="var(--dermiqt-yellow)" />
+                    </q-item-section>
+                  </q-item>
                 </q-list>
-              </q-menu>
-            </q-btn>
+              </q-btn-dropdown>
+            </div>
+
+            <!-- Search Button -->
             <q-btn
               flat
               round
               icon="search"
-              class="bg-grey-7 text-white q-ml-sm"
+              class="action-btn search-btn"
               @click="toggleSearch"
             />
+
+            <!-- CTA Button -->
             <q-btn
-              color="red"
-              label="Get Started"
-              class="q-ml-md get-started-btn"
+              class="cta-btn"
+              :label="$t('nav.shopNow')"
+              @click="scrollToSection('contactUs')"
             />
           </div>
 
@@ -72,36 +114,32 @@
           <q-btn
             flat
             dense
-            icon="search"
-            aria-label="Search"
-            @click="toggleSearch"
-            class="lt-md text-dark q-ml-sm"
-          />
-          <q-btn
-            flat
-            dense
             round
             icon="menu"
             aria-label="Menu"
-            @click="toggleRightDrawer"
-            class="lt-md text-dark"
+            @click="toggleMobileMenu"
+            class="mobile-menu-btn"
           />
         </q-toolbar>
 
-        <!-- Search Input Field -->
-        <div v-if="showSearch" class="search-container">
-          <div class="search-input-wrapper">
+        <!-- Search Bar -->
+        <div v-if="showSearch" class="search-overlay">
+          <div class="search-container">
             <q-input
               v-model="searchQuery"
-              placeholder="Search all of XPO"
+              :placeholder="$t('header.searchPlaceholder')"
               class="search-input"
               outlined
               dense
               autofocus
               @keyup.enter="performSearch"
+              @blur="closeSearch"
             >
-              <template v-slot:append>
+              <template v-slot:prepend>
                 <q-icon name="search" class="search-icon" />
+              </template>
+              <template v-slot:append>
+                <q-btn flat round icon="close" @click="closeSearch" />
               </template>
             </q-input>
           </div>
@@ -110,42 +148,76 @@
 
       <!-- Mobile Navigation Drawer -->
       <q-drawer
-        v-model="rightDrawerOpen"
+        v-model="mobileMenuOpen"
         side="right"
         bordered
         :width="300"
-        class="bg-dark text-white"
+        class="mobile-drawer"
       >
-        <q-list>
-          <q-item-label header class="text-white">Navigation</q-item-label>
-          <q-item clickable v-ripple to="/" exact>
+        <div class="mobile-header">
+          <div class="mobile-brand">
+            <img
+              src="../assets/emisnest-logo.png"
+              alt="Emi's Nest"
+              class="mobile-logo-image"
+            />
+            <h3 class="mobile-brand-name">{{ $t("header.brand.name") }}</h3>
+          </div>
+        </div>
+
+        <q-list class="mobile-nav-list">
+          <q-item
+            clickable
+            v-ripple
+            @click="scrollToSection('services')"
+            class="mobile-nav-item"
+          >
             <q-item-section avatar>
-              <q-icon name="home" class="text-white" />
+              <q-icon name="local_shipping" color="var(--dermiqt-yellow)" />
             </q-item-section>
-            <q-item-section class="text-white">Home</q-item-section>
+            <q-item-section>{{ $t("nav.services") }}</q-item-section>
           </q-item>
-          <q-item clickable v-ripple to="/services">
+          <q-item
+            clickable
+            v-ripple
+            @click="scrollToSection('about')"
+            class="mobile-nav-item"
+          >
             <q-item-section avatar>
-              <q-icon name="local_shipping" class="text-white" />
+              <q-icon name="info" color="var(--dermiqt-yellow)" />
             </q-item-section>
-            <q-item-section class="text-white">Services</q-item-section>
+            <q-item-section>{{ $t("nav.about") }}</q-item-section>
           </q-item>
-          <q-item clickable v-ripple to="/about">
+          <q-item
+            clickable
+            v-ripple
+            @click="scrollToSection('testimonials')"
+            class="mobile-nav-item"
+          >
             <q-item-section avatar>
-              <q-icon name="info" class="text-white" />
+              <q-icon name="star" color="var(--dermiqt-yellow)" />
             </q-item-section>
-            <q-item-section class="text-white">About</q-item-section>
+            <q-item-section>{{ $t("nav.testimonials") }}</q-item-section>
           </q-item>
-          <q-item clickable v-ripple to="/contact">
+          <q-item
+            clickable
+            v-ripple
+            @click="scrollToSection('contact')"
+            class="mobile-nav-item"
+          >
             <q-item-section avatar>
-              <q-icon name="contact_support" class="text-white" />
+              <q-icon name="contact_support" color="var(--dermiqt-yellow)" />
             </q-item-section>
-            <q-item-section class="text-white">Contact</q-item-section>
+            <q-item-section>{{ $t("nav.contact") }}</q-item-section>
           </q-item>
         </q-list>
 
-        <div class="q-pa-md">
-          <q-btn color="red" label="Get Started" class="full-width" />
+        <div class="mobile-actions">
+          <q-btn
+            class="mobile-cta-btn"
+            :label="$t('nav.getQuote')"
+            @click="scrollToSection('contact')"
+          />
         </div>
       </q-drawer>
 
@@ -158,21 +230,56 @@
 </template>
 
 <script>
-import { ref } from "vue";
+import { ref, computed, onMounted } from "vue";
 import { useQuasar } from "quasar";
+import { useI18n } from "vue-i18n";
 
 export default {
   name: "App",
   setup() {
     const $q = useQuasar();
+    const { t, locale } = useI18n();
+
     const tab = ref("home");
-    const rightDrawerOpen = ref(false);
+    const mobileMenuOpen = ref(false);
     const trackingNumber = ref("");
     const showSearch = ref(false);
     const searchQuery = ref("");
 
-    const toggleRightDrawer = () => {
-      rightDrawerOpen.value = !rightDrawerOpen.value;
+    // Language management
+    const currentLocale = computed(() => locale.value);
+
+    const changeLanguage = (newLocale) => {
+      locale.value = newLocale;
+      localStorage.setItem("dermiqt-locale", newLocale);
+      $q.notify({
+        type: "positive",
+        message:
+          newLocale === "fr-FR"
+            ? "Langue changée en français"
+            : "Language changed to English",
+        position: "top",
+      });
+    };
+
+    // Load saved language preference
+    onMounted(() => {
+      const savedLocale = localStorage.getItem("dermiqt-locale");
+      if (savedLocale && (savedLocale === "en-US" || savedLocale === "fr-FR")) {
+        locale.value = savedLocale;
+      }
+    });
+
+    const toggleMobileMenu = () => {
+      mobileMenuOpen.value = !mobileMenuOpen.value;
+    };
+
+    const scrollToSection = (sectionId) => {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+      mobileMenuOpen.value = false;
     };
 
     const toggleSearch = () => {
@@ -188,12 +295,17 @@ export default {
       }
     };
 
+    const closeSearch = () => {
+      showSearch.value = false;
+      searchQuery.value = "";
+    };
+
     const performSearch = () => {
       if (searchQuery.value.trim()) {
         console.log("Searching for:", searchQuery.value);
         $q.notify({
           type: "info",
-          message: `Searching for: ${searchQuery.value}`,
+          message: t("messages.searchPerformed", { query: searchQuery.value }),
           position: "top",
         });
         // Here you would typically navigate to search results or perform the search
@@ -207,7 +319,7 @@ export default {
         console.log("Tracking shipment:", trackingNumber.value);
         $q.notify({
           type: "positive",
-          message: "Tracking information will be displayed",
+          message: t("messages.trackingSuccess"),
           position: "top",
         });
       }
@@ -215,12 +327,16 @@ export default {
 
     return {
       tab,
-      rightDrawerOpen,
+      mobileMenuOpen,
       trackingNumber,
       showSearch,
       searchQuery,
-      toggleRightDrawer,
+      currentLocale,
+      changeLanguage,
+      toggleMobileMenu,
+      scrollToSection,
       toggleSearch,
+      closeSearch,
       performSearch,
       trackShipment,
     };
@@ -233,102 +349,290 @@ export default {
   font-family: "Roboto", sans-serif;
 }
 
-.q-header {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border-bottom: 1px solid #e0e0e0;
+/* Modern Header Styles */
+.header-modern {
+  background: linear-gradient(
+    135deg,
+    var(--dermiqt-dark-text) 0%,
+    #1a1a1a 100%
+  );
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  border-bottom: 1px solid rgba(193, 120, 23, 0.2);
 }
 
-.q-footer {
-  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.3);
-}
-
-/* Navigation Items */
-.nav-item {
+.toolbar-modern {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  min-height: 80px;
+}
+
+/* Logo Section */
+.logo-section {
+  display: flex;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo-image {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--dermiqt-yellow);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.brand-tagline {
+  font-size: 0.75rem;
+  color: var(--dermiqt-white);
+  opacity: 0.8;
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* Desktop Navigation */
+.nav-desktop {
+  display: flex;
+  align-items: center;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-item {
+  position: relative;
   cursor: pointer;
-  padding: 0.5rem 0.75rem;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
 }
 
 .nav-item:hover {
-  background-color: #f5f5f5;
+  background: rgba(193, 120, 23, 0.1);
 }
 
 .nav-link {
-  color: #000;
-  font-weight: bold;
+  color: var(--dermiqt-white);
+  font-weight: 600;
   font-size: 0.875rem;
   text-decoration: none;
-  font-family: sans-serif;
+  transition: color 0.3s ease;
 }
 
-.nav-link-btn {
-  color: #000 !important;
-  font-weight: bold !important;
-  font-size: 0.875rem !important;
-  font-family: sans-serif !important;
+.nav-item:hover .nav-link {
+  color: var(--dermiqt-yellow);
 }
 
-.nav-link-btn:hover {
-  background-color: #f5f5f5 !important;
+.nav-indicator {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: var(--dermiqt-yellow);
+  transition: width 0.3s ease;
 }
 
-.get-started-btn {
-  font-weight: bold !important;
-  font-family: sans-serif !important;
-  text-transform: none !important;
+.nav-item:hover .nav-indicator {
+  width: 100%;
 }
 
-/* Search Input Styles */
-.search-container {
-  background: white;
+/* Action Buttons */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.language-switcher {
+  position: relative;
+}
+
+.lang-btn {
+  background: rgba(193, 120, 23, 0.1);
+  border: 1px solid rgba(193, 120, 23, 0.2);
+  color: var(--dermiqt-yellow);
+  transition: all 0.3s ease;
+}
+
+.lang-btn:hover {
+  background: var(--dermiqt-yellow);
+  color: var(--dermiqt-dark-text);
+  transform: translateY(-2px);
+}
+
+.lang-menu {
+  background: var(--dermiqt-dark-text);
+  border: 1px solid rgba(193, 120, 23, 0.2);
+  border-radius: 8px;
+  min-width: 200px;
+}
+
+.lang-item {
+  color: var(--dermiqt-white);
+  transition: background 0.3s ease;
+}
+
+.lang-item:hover {
+  background: rgba(193, 120, 23, 0.1);
+}
+
+.action-btn {
+  background: rgba(193, 120, 23, 0.1);
+  border: 1px solid rgba(193, 120, 23, 0.2);
+  color: var(--dermiqt-yellow);
+  transition: all 0.3s ease;
+}
+
+.action-btn:hover {
+  background: var(--dermiqt-yellow);
+  color: var(--dermiqt-dark-text);
+  transform: translateY(-2px);
+}
+
+.cta-btn {
+  background: var(--dermiqt-yellow);
+  color: var(--dermiqt-dark-text);
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-transform: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(193, 120, 23, 0.3);
+}
+
+.cta-btn:hover {
+  background: #e6a800;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(193, 120, 23, 0.4);
+}
+
+.mobile-menu-btn {
+  display: none;
+  background: rgba(193, 120, 23, 0.1);
+  border: 1px solid rgba(193, 120, 23, 0.2);
+  color: var(--dermiqt-yellow);
+}
+
+/* Search Overlay */
+.search-overlay {
+  background: rgba(0, 0, 0, 0.9);
   padding: 1rem 2rem;
-  border-bottom: 1px solid #e0e0e0;
   animation: slideDown 0.3s ease-out;
 }
 
-.search-input-wrapper {
-  max-width: 800px;
+.search-container {
+  max-width: 600px;
   margin: 0 auto;
 }
 
 .search-input {
-  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(193, 120, 23, 0.3);
+  border-radius: 8px;
 }
 
-.search-input .q-field__control {
-  background: white !important;
-  border: none !important;
-  border-bottom: 2px solid #dc3545 !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
+.search-input :deep(.q-field__control) {
+  background: transparent;
 }
 
-.search-input .q-field__control:hover {
-  border-bottom: 2px solid #dc3545 !important;
+.search-input :deep(.q-field__native) {
+  color: var(--dermiqt-white);
 }
 
-.search-input .q-field__control:focus-within {
-  border-bottom: 2px solid #dc3545 !important;
-}
-
-.search-input .q-field__native {
-  color: #000 !important;
-  font-size: 1rem !important;
-  padding: 0.75rem 0 !important;
-}
-
-.search-input .q-field__native::placeholder {
-  color: #999 !important;
-  font-size: 1rem !important;
+.search-input :deep(.q-field__native::placeholder) {
+  color: var(--dermiqt-white);
+  opacity: 0.6;
 }
 
 .search-icon {
-  color: #666 !important;
+  color: var(--dermiqt-yellow);
 }
 
+/* Mobile Drawer */
+.mobile-drawer {
+  background: var(--dermiqt-dark-text);
+  color: var(--dermiqt-white);
+}
+
+.mobile-header {
+  padding: 2rem 1.5rem;
+  border-bottom: 1px solid rgba(193, 120, 23, 0.2);
+}
+
+.mobile-brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.mobile-logo-image {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+.mobile-brand-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--dermiqt-yellow);
+  margin: 0;
+}
+
+.mobile-nav-list {
+  padding: 1rem 0;
+}
+
+.mobile-nav-item {
+  color: var(--dermiqt-white);
+  transition: background 0.3s ease;
+  margin: 0.5rem 1rem;
+  border-radius: 8px;
+}
+
+.mobile-nav-item:hover {
+  background: rgba(193, 120, 23, 0.1);
+}
+
+.mobile-actions {
+  padding: 2rem 1.5rem;
+  border-top: 1px solid rgba(193, 120, 23, 0.2);
+}
+
+.mobile-cta-btn {
+  background: var(--dermiqt-yellow);
+  color: var(--dermiqt-dark-text);
+  font-weight: 600;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 8px;
+  text-transform: none;
+}
+
+/* Animations */
 @keyframes slideDown {
   from {
     opacity: 0;
@@ -340,8 +644,80 @@ export default {
   }
 }
 
-.tracking-input .q-field__control {
-  background: white;
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .nav-desktop {
+    display: none;
+  }
+
+  .mobile-menu-btn {
+    display: flex;
+  }
+
+  .toolbar-modern {
+    padding: 0 1rem;
+  }
+
+  .brand-name {
+    font-size: 1.25rem;
+  }
+
+  .brand-tagline {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .language-switcher {
+    display: none;
+  }
+  .nav-item-contact {
+    display: none;
+  }
+
+  .toolbar-modern {
+    min-height: 70px;
+  }
+
+  .logo-container {
+    gap: 0.75rem;
+  }
+
+  .logo-image {
+    width: 45px;
+    height: 45px;
+  }
+
+  .brand-name {
+    font-size: 1.125rem;
+  }
+
+  .brand-tagline {
+    display: none;
+  }
+
+  .nav-actions {
+    gap: 0.5rem;
+  }
+
+  .cta-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .toolbar-modern {
+    padding: 0 0.75rem;
+  }
+
+  .brand-name {
+    font-size: 1rem;
+  }
+
+  .cta-btn {
+    display: none;
+  }
 }
 
 /* Custom scrollbar */
@@ -350,15 +726,15 @@ export default {
 }
 
 ::-webkit-scrollbar-track {
-  background: #1d1d1d;
+  background: var(--dermiqt-dark-text);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #ff0000;
+  background: var(--dermiqt-yellow);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #cc0000;
+  background: #e6a800;
 }
 </style>
