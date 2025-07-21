@@ -14,7 +14,7 @@ export default {
 
   services: {
     residential: {
-      title: "Residential Moving",
+      title: "Local Residential Moving",
       description:
         "Complete home moving services tailored to your specific needs. From studio apartments to large family homes, we handle every aspect of your residential move.",
       features: [
@@ -25,8 +25,20 @@ export default {
         "Transportation & delivery",
       ],
     },
+    longdistance: {
+      title: "Long-Distance Moving",
+      description:
+        "Reliable long-distance moving services across Canada with careful planning and professional execution for stress-free relocations.",
+      features: [
+        "Cross-country moving",
+        "Professional planning",
+        "Secure transportation",
+        "Delivery coordination",
+        "Unpacking assistance",
+      ],
+    },
     commercial: {
-      title: "Commercial Moving",
+      title: "Office & Commercial Relocation",
       description:
         "Efficient office and business relocation services designed to minimize downtime and ensure a smooth transition for your business operations.",
       features: [
@@ -38,7 +50,7 @@ export default {
       ],
     },
     packing: {
-      title: "Packing Services",
+      title: "Packing & Unpacking Services",
       description:
         "Professional packing services using high-quality materials to ensure your belongings are protected during transit.",
       features: [
@@ -49,20 +61,8 @@ export default {
         "Labeled & organized boxes",
       ],
     },
-    storage: {
-      title: "Storage Solutions",
-      description:
-        "Secure, climate-controlled storage facilities for short-term and long-term storage needs with flexible access options.",
-      features: [
-        "Climate-controlled units",
-        "24/7 security monitoring",
-        "Flexible access hours",
-        "Various unit sizes",
-        "Insurance options",
-      ],
-    },
     logistics: {
-      title: "Logistics Support",
+      title: "Logistics & Freight Delivery",
       description:
         "Comprehensive logistics solutions including transportation, warehousing, and supply chain management for businesses of all sizes.",
       features: [
@@ -73,55 +73,78 @@ export default {
         "Real-time tracking",
       ],
     },
-    international: {
-      title: "International Moving",
+    storage: {
+      title: "Storage Services (Coming Soon)",
       description:
-        "Global relocation services with expertise in customs clearance, documentation, and international shipping regulations.",
+        "Secure, climate-controlled storage facilities for short-term and long-term storage needs with flexible access options.",
       features: [
-        "Customs documentation",
-        "International shipping",
-        "Visa & permit assistance",
-        "Destination services",
-        "24/7 support worldwide",
+        "Climate-controlled units",
+        "24/7 security monitoring",
+        "Flexible access hours",
+        "Various unit sizes",
+        "Insurance options",
       ],
     },
   },
 
   process: {
-    badge: "Our Process",
-    title: "Streamlined Moving Process",
+    badge: "The Emi's Nest Process",
+    title: "Customer Journey",
     description:
       "A proven approach designed to ensure your move is smooth, efficient, and stress-free from start to finish.",
     steps: {
-      consultation: {
-        title: "1. Consultation",
+      quote: {
+        title: "1. Request a Quote",
         description:
-          "Initial consultation to understand your needs and provide a detailed quote",
+          "Get a free, transparent quote tailored to your specific moving needs",
       },
-      planning: {
-        title: "2. Planning",
+      consultation: {
+        title: "2. Free Consultation",
         description:
-          "Detailed planning and scheduling to ensure everything runs smoothly",
+          "Detailed consultation to understand your requirements and plan your move",
+      },
+      booking: {
+        title: "3. Booking Confirmation",
+        description:
+          "Secure your moving date with our easy booking and confirmation process",
       },
       moving: {
-        title: "3. Moving Day",
+        title: "4. Moving Day",
         description:
-          "Professional team handles packing, loading, and transportation",
+          "Professional team handles packing, loading, and transportation with care",
       },
       delivery: {
-        title: "4. Delivery",
+        title: "5. Delivery & Feedback",
         description:
-          "Safe delivery and setup at your new location with unpacking assistance",
+          "Safe delivery and setup at your new location, followed by feedback collection",
       },
     },
   },
 
   features: {
-    badge: "Why Choose Us",
-    title: "What Sets Us Apart",
+    badge: "What Makes Emi's Nest Different",
+    title: "Why Choose Us",
     description:
       "Experience the difference of working with a team that truly cares about your move and delivers exceptional results.",
     items: [
+      {
+        icon: "payments",
+        title: "Transparent Pricing",
+        description:
+          "Clear, upfront pricing with no hidden fees or surprise charges",
+      },
+      {
+        icon: "groups",
+        title: "Professional Team",
+        description:
+          "Experienced, trained professionals who treat your belongings with care",
+      },
+      {
+        icon: "computer",
+        title: "Digital Booking & Tracking",
+        description:
+          "Easy online booking and real-time tracking for complete peace of mind",
+      },
       {
         icon: "verified",
         title: "Licensed & Insured",
@@ -129,34 +152,16 @@ export default {
           "Complete licensing and comprehensive insurance coverage for your peace of mind",
       },
       {
-        icon: "schedule",
-        title: "On-Time Guarantee",
-        description:
-          "We understand timing is crucial and guarantee punctual service delivery",
-      },
-      {
         icon: "support_agent",
-        title: "24/7 Support",
+        title: "Customer-Centered Experience",
         description:
-          "Round-the-clock customer support to address any concerns or questions",
+          "Personalized service tailored to your specific needs and preferences",
       },
       {
-        icon: "security",
-        title: "Secure Handling",
+        icon: "schedule",
+        title: "Flexible Scheduling",
         description:
-          "Advanced security protocols ensure your belongings are always protected",
-      },
-      {
-        icon: "analytics",
-        title: "Real-Time Tracking",
-        description:
-          "Monitor your shipment's progress with our advanced tracking system",
-      },
-      {
-        icon: "groups",
-        title: "Expert Team",
-        description:
-          "Experienced professionals trained in safe and efficient moving practices",
+          "We work around your schedule to ensure minimal disruption to your life",
       },
     ],
   },

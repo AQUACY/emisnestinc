@@ -751,25 +751,25 @@ export default {
     );
 
     const internationalTitle = computed(() =>
-      t("services.services.international.title")
+      t("services.services.longdistance.title")
     );
     const internationalDescription = computed(() =>
-      t("services.services.international.description")
+      t("services.services.longdistance.description")
     );
     const internationalFeatures1 = computed(() =>
-      t("services.services.international.features.0")
+      t("services.services.longdistance.features.0")
     );
     const internationalFeatures2 = computed(() =>
-      t("services.services.international.features.1")
+      t("services.services.longdistance.features.1")
     );
     const internationalFeatures3 = computed(() =>
-      t("services.services.international.features.2")
+      t("services.services.longdistance.features.2")
     );
     const internationalFeatures4 = computed(() =>
-      t("services.services.international.features.3")
+      t("services.services.longdistance.features.3")
     );
     const internationalFeatures5 = computed(() =>
-      t("services.services.international.features.4")
+      t("services.services.longdistance.features.4")
     );
 
     // Process translations
@@ -779,28 +779,28 @@ export default {
       t("services.process.description")
     );
     const consultationTitle = computed(() =>
-      t("services.process.steps.consultation.title")
+      t("services.process.steps.quote.title")
     );
     const consultationDescription = computed(() =>
-      t("services.process.steps.consultation.description")
+      t("services.process.steps.quote.description")
     );
     const planningTitle = computed(() =>
-      t("services.process.steps.planning.title")
+      t("services.process.steps.consultation.title")
     );
     const planningDescription = computed(() =>
-      t("services.process.steps.planning.description")
+      t("services.process.steps.consultation.description")
     );
     const movingTitle = computed(() =>
-      t("services.process.steps.moving.title")
+      t("services.process.steps.booking.title")
     );
     const movingDescription = computed(() =>
-      t("services.process.steps.moving.description")
+      t("services.process.steps.booking.description")
     );
     const deliveryTitle = computed(() =>
-      t("services.process.steps.delivery.title")
+      t("services.process.steps.moving.title")
     );
     const deliveryDescription = computed(() =>
-      t("services.process.steps.delivery.description")
+      t("services.process.steps.moving.description")
     );
 
     // Features translations

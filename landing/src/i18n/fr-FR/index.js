@@ -32,8 +32,8 @@ export default {
   header: {
     searchPlaceholder: "Rechercher dans Emi's Nest",
     brand: {
-      name: "Emi's Nest",
-      tagline: "Solutions LTL de Classe Mondiale",
+      name: "Emi's Nest Inc.",
+      tagline: "Entreprise de Déménagement et Logistique",
     },
     language: {
       english: "Anglais",
@@ -43,27 +43,27 @@ export default {
 
   // Hero Section
   hero: {
-    title: "Votre Fret en Premier",
-    subtitle: "Solutions LTL de Classe Mondiale",
+    title: "Déménagement et Logistique Sans Stress",
+    subtitle: "Entreprise de Déménagement de Confiance de Toronto",
     description:
-      "Nous sommes une entreprise de fret LTL de premier plan avec un réseau, une technologie et un service de classe mondiale. Notre plateforme simplifie l'expédition LTL, offrant des options de devis instantané. Découvrez la puissance de notre réseau et obtenez votre devis LTL aujourd'hui !",
+      "Emi's Nest Inc. est une entreprise moderne et avant-gardiste de déménagement et logistique basée à Toronto, Canada. Nous rendons le déménagement sans stress, fluide et sécurisé grâce à l'innovation, la transparence et le dévouement à la satisfaction client.",
     trackingTitle: "Suivre Votre Expédition",
     trackingPlaceholder: "Entrez le numéro de suivi",
     features: [
-      "Suivi en temps réel",
-      "Devis instantanés",
-      "Couverture nationale",
-      "Support 24/7",
+      "Prix transparents",
+      "Équipe professionnelle",
+      "Réservation et suivi numériques",
+      "Licencié et assuré",
     ],
-    ctaButton: "Commencer",
+    ctaButton: "Obtenir un Devis Gratuit",
   },
 
   // Award Badge
   award: {
-    fortune: "EMI'S NEST",
-    title: "Partenaire Logistique le Plus Fiable d'Amérique",
-    year: "2025",
-    deliveryRate: "Taux de Livraison à Temps",
+    fortune: "EMI'S NEST INC.",
+    title: "Entreprise de Déménagement la Plus Fiable de Toronto",
+    year: "2024",
+    deliveryRate: "Taux de Satisfaction Client",
   },
 
   // Take Control Section

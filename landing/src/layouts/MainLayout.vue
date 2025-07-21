@@ -191,10 +191,27 @@
         </div>
 
         <q-list class="mobile-nav-list">
+          <!-- Home -->
+          <q-item clickable v-ripple @click="goHome" class="mobile-nav-item">
+            <q-item-section avatar>
+              <q-icon name="home" color="var(--dermiqt-yellow)" />
+            </q-item-section>
+            <q-item-section>{{ $t("nav.menu") }}</q-item-section>
+          </q-item>
+
+          <!-- About -->
+          <q-item clickable v-ripple @click="goAbout" class="mobile-nav-item">
+            <q-item-section avatar>
+              <q-icon name="info" color="var(--dermiqt-yellow)" />
+            </q-item-section>
+            <q-item-section>{{ $t("nav.about") }}</q-item-section>
+          </q-item>
+
+          <!-- Services -->
           <q-item
             clickable
             v-ripple
-            @click="scrollToSection('services')"
+            @click="goServices"
             class="mobile-nav-item"
           >
             <q-item-section avatar>
@@ -202,19 +219,8 @@
             </q-item-section>
             <q-item-section>{{ $t("nav.services") }}</q-item-section>
           </q-item>
-          <q-item
-            clickable
-            v-ripple
-            @click="scrollToSection('about')"
-            class="mobile-nav-item"
-          >
-            <q-item-section avatar>
-              <q-icon name="info" color="var(--dermiqt-yellow)" />
-            </q-item-section>
-            <q-item-section>{{ $t("nav.about") }}</q-item-section>
-          </q-item>
 
-          <!-- Mobile Careers Submenu -->
+          <!-- Careers Submenu -->
           <q-expansion-item
             icon="work"
             :label="$t('nav.careers')"
@@ -263,35 +269,90 @@
               </q-item>
             </q-list>
           </q-expansion-item>
-          <q-item
-            clickable
-            v-ripple
-            @click="scrollToSection('testimonials')"
-            class="mobile-nav-item"
-          >
+
+          <!-- News -->
+          <q-item clickable v-ripple @click="goNews" class="mobile-nav-item">
             <q-item-section avatar>
-              <q-icon name="star" color="var(--dermiqt-yellow)" />
+              <q-icon name="article" color="var(--dermiqt-yellow)" />
             </q-item-section>
-            <q-item-section>{{ $t("nav.testimonials") }}</q-item-section>
+            <q-item-section>{{ $t("nav.news") }}</q-item-section>
           </q-item>
+
+          <!-- Contact -->
           <q-item
             clickable
             v-ripple
-            @click="scrollToSection('contact')"
+            @click="scrollToSection('contactUs')"
             class="mobile-nav-item"
           >
             <q-item-section avatar>
               <q-icon name="contact_support" color="var(--dermiqt-yellow)" />
             </q-item-section>
-            <q-item-section>{{ $t("nav.contact") }}</q-item-section>
+            <q-item-section>{{ $t("nav.contactUs") }}</q-item-section>
           </q-item>
         </q-list>
 
+        <!-- Mobile Actions -->
         <div class="mobile-actions">
+          <!-- Language Switcher -->
+          <div class="mobile-language-switcher">
+            <q-btn-dropdown
+              flat
+              :label="currentLocale === 'en-US' ? 'English' : 'Français'"
+              class="mobile-lang-btn"
+              color="var(--dermiqt-yellow)"
+              text-color="var(--dermiqt-dark-text)"
+            >
+              <q-list class="lang-menu">
+                <q-item
+                  clickable
+                  v-ripple
+                  @click="changeLanguage('en-US')"
+                  class="lang-item"
+                >
+                  <q-item-section avatar>
+                    <q-icon name="flag" color="var(--dermiqt-yellow)" />
+                  </q-item-section>
+                  <q-item-section>{{
+                    $t("header.language.english")
+                  }}</q-item-section>
+                  <q-item-section side v-if="currentLocale === 'en-US'">
+                    <q-icon name="check" color="var(--dermiqt-yellow)" />
+                  </q-item-section>
+                </q-item>
+                <q-item
+                  clickable
+                  v-ripple
+                  @click="changeLanguage('fr-FR')"
+                  class="lang-item"
+                >
+                  <q-item-section avatar>
+                    <q-icon name="flag" color="var(--dermiqt-yellow)" />
+                  </q-item-section>
+                  <q-item-section>{{
+                    $t("header.language.french")
+                  }}</q-item-section>
+                  <q-item-section side v-if="currentLocale === 'fr-FR'">
+                    <q-icon name="check" color="var(--dermiqt-yellow)" />
+                  </q-item-section>
+                </q-item>
+              </q-list>
+            </q-btn-dropdown>
+          </div>
+
+          <!-- Search Button -->
+          <q-btn
+            flat
+            icon="search"
+            class="mobile-search-btn"
+            @click="toggleSearch"
+          />
+
+          <!-- CTA Button -->
           <q-btn
             class="mobile-cta-btn"
-            :label="$t('nav.getQuote')"
-            @click="scrollToSection('contact')"
+            :label="$t('nav.shopNow')"
+            @click="scrollToSection('contactUs')"
           />
         </div>
       </q-drawer>
@@ -835,6 +896,31 @@ export default {
 .mobile-actions {
   padding: 2rem 1.5rem;
   border-top: 1px solid rgba(193, 120, 23, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.mobile-language-switcher {
+  width: 100%;
+}
+
+.mobile-lang-btn {
+  width: 100%;
+  background: rgba(193, 120, 23, 0.1);
+  border: 1px solid rgba(193, 120, 23, 0.3);
+  color: var(--dermiqt-white);
+  text-transform: none;
+  font-weight: 500;
+}
+
+.mobile-search-btn {
+  width: 100%;
+  background: rgba(193, 120, 23, 0.1);
+  border: 1px solid rgba(193, 120, 23, 0.3);
+  color: var(--dermiqt-yellow);
+  text-transform: none;
+  font-weight: 500;
 }
 
 .mobile-cta-btn {

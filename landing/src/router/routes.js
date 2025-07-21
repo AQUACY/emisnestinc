@@ -1,11 +1,11 @@
 const routes = [
   {
     path: "/",
-    component: () => import("layouts/MainLayout.vue"),
+    component: () => import("layouts/NewLayout.vue"),
     children: [
       {
         path: "",
-        component: () => import("src/pages/HomePage.vue"),
+        component: () => import("src/pages/new/HomePage.vue"),
         meta: { title: "Home - Emi's Nest" },
       },
       {

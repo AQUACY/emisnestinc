@@ -32,8 +32,8 @@ export default {
   header: {
     searchPlaceholder: "Search all of Emi's Nest",
     brand: {
-      name: "Emi's Nest",
-      tagline: "World-Class LTL Solutions",
+      name: "Emi's Nest Inc.",
+      tagline: "Moving & Logistics Company",
     },
     language: {
       english: "English",
@@ -43,27 +43,27 @@ export default {
 
   // Hero Section
   hero: {
-    title: "Your Freight First",
-    subtitle: "World-Class LTL Solutions",
+    title: "Stress-Free Moving & Logistics",
+    subtitle: "Toronto's Trusted Moving Company",
     description:
-      "We're a leading LTL freight company with a world-class network, technology, and service. Our platform simplifies LTL shipping, offering instant freight quote options. Experience our network's power and get your LTL quote today!",
+      "Emi's Nest Inc. is a modern, forward-thinking moving and logistics company based in Toronto, Canada. We make moving stress-free, seamless, and secure through innovation, transparency, and dedication to client satisfaction.",
     trackingTitle: "Track Your Shipment",
     trackingPlaceholder: "Enter tracking number",
     features: [
-      "Real-time tracking",
-      "Instant quotes",
-      "Nationwide coverage",
-      "24/7 support",
+      "Transparent pricing",
+      "Professional team",
+      "Digital booking & tracking",
+      "Licensed & insured",
     ],
-    ctaButton: "Get Started",
+    ctaButton: "Get Free Quote",
   },
 
   // Award Badge
   award: {
-    fortune: "EMI'S NEST",
-    title: "America's Most Trusted Logistics Partner",
-    year: "2025",
-    deliveryRate: "On-time Delivery Rate",
+    fortune: "EMI'S NEST INC.",
+    title: "Toronto's Most Trusted Moving Company",
+    year: "2024",
+    deliveryRate: "Customer Satisfaction Rate",
   },
 
   // Take Control Section
@@ -608,14 +608,14 @@ export default {
   footer: {
     company: {
       name: "Emi's Nest Inc.",
-      tagline: "World-Class Freight Solutions",
+      tagline: "Moving & Logistics Company",
       description:
-        "Leading the industry with innovative logistics solutions, cutting-edge technology, and unparalleled customer service. Your trusted partner in freight transportation.",
+        "A modern, forward-thinking moving and logistics company based in Toronto, Canada. We make moving stress-free, seamless, and secure through innovation, transparency, and dedication to client satisfaction.",
     },
     contact: {
-      phone: "+1 (800) 299-1700",
-      email: "info@emisnest.com",
-      address: "123 Logistics Way, Suite 100, Dallas, TX 75201",
+      phone: "[To be added]",
+      email: "[To be added]",
+      address: "Toronto, Ontario, Canada",
     },
     social: {
       title: "Follow Us",
@@ -631,12 +631,12 @@ export default {
       services: {
         title: "Services",
         items: [
-          "LTL Freight",
-          "Full Truckload",
-          "Expedited Shipping",
-          "Warehousing",
-          "Supply Chain Solutions",
-          "Customs Clearance",
+          "Local Residential Moving",
+          "Long-Distance Moving",
+          "Office & Commercial Relocation",
+          "Packing & Unpacking Services",
+          "Logistics & Freight Delivery",
+          "Storage Services",
         ],
       },
       company: {
@@ -775,7 +775,7 @@ export default {
       badge: "About Us",
       title: "Your Trusted Partner in Moving & Logistics",
       description:
-        "For over 15 years, we've been delivering exceptional moving services with the same care and attention to detail that made us successful from day one.",
+        "Emi’s Nest Inc. is a modern, forward-thinking moving and logistics company based in Toronto, Canada. The company was founded with a mission to redefine the moving experience for both residential and commercial clients...",
       stats: {
         years: "Years Experience",
         moves: "Successful Moves",
@@ -811,24 +811,34 @@ export default {
       },
     },
     values: {
-      badge: "Our Values",
+      badge: "Our Core Values",
       title: "The Principles That Guide Everything We Do",
       description:
         "Our commitment to quality, reliability, and customer satisfaction has remained unchanged throughout our journey.",
-      care: {
-        title: "Care & Respect",
+      trust: {
+        title: "Trust",
         description:
-          "We treat every item with the same care and respect we would give our own belongings, ensuring nothing is damaged during the moving process.",
+          "Building lasting relationships through transparency, honesty, and reliable service delivery.",
       },
-      reliability: {
-        title: "Reliability",
+      efficiency: {
+        title: "Efficiency",
         description:
-          "We understand the importance of timing in moving. Our team is committed to delivering on our promises and meeting every deadline.",
+          "Optimizing every aspect of our operations to deliver fast, cost-effective solutions.",
       },
-      community: {
-        title: "Community",
+      innovation: {
+        title: "Innovation",
         description:
-          "We believe in giving back to the communities we serve and supporting local initiatives that make a difference in people's lives.",
+          "Embracing technology and new approaches to continuously improve our services.",
+      },
+      empathy: {
+        title: "Empathy",
+        description:
+          "Understanding our customers' needs and treating their belongings with the care they deserve.",
+      },
+      excellence: {
+        title: "Excellence",
+        description:
+          "Striving for the highest standards in every move, every delivery, and every interaction.",
       },
     },
     team: {
@@ -913,20 +923,20 @@ export default {
       phone: {
         title: "Phone",
         main: "Main Office",
-        number: "(555) 123-4567",
-        description: "Available 24/7 for emergencies",
+        number: "[To be added]",
+        description: "Available during business hours",
       },
       email: {
         title: "Email",
         main: "General Inquiries",
-        address: "info@emisnestinc.com",
+        address: "[To be added]",
         description: "We respond within 2 hours",
       },
       office: {
         title: "Office",
         main: "Main Office",
-        address: "123 Moving Way",
-        details: "Suite 100, City, State 12345",
+        address: "Toronto, Ontario",
+        details: "Canada",
       },
     },
     form: {
@@ -965,10 +975,10 @@ export default {
       },
       address: {
         title: "Address",
-        line1: "123 Moving Way",
-        line2: "Suite 100",
-        line3: "City, State 12345",
-        line4: "United States",
+        line1: "Toronto, Ontario",
+        line2: "Canada",
+        line3: "",
+        line4: "",
       },
       directions: {
         title: "Directions",
@@ -986,8 +996,8 @@ export default {
     emergency: {
       title: "Emergency Contact",
       subtitle: "For urgent matters outside of business hours",
-      line: "24/7 Emergency Line",
-      number: "(555) 911-MOVE",
+      line: "Emergency Line",
+      number: "[To be added]",
       description: "Available for urgent moving emergencies",
     },
     social: {
@@ -998,10 +1008,6 @@ export default {
           name: "Facebook",
           description: "Follow us for moving tips",
         },
-        twitter: {
-          name: "Twitter",
-          description: "Real-time updates",
-        },
         instagram: {
           name: "Instagram",
           description: "Behind the scenes",
@@ -1009,6 +1015,10 @@ export default {
         linkedin: {
           name: "LinkedIn",
           description: "Professional updates",
+        },
+        tiktok: {
+          name: "TikTok",
+          description: "Fun moving content",
         },
       },
     },
@@ -1045,19 +1055,19 @@ export default {
     },
     responses: {
       tracking:
-        "You can track your shipment by visiting our tracking page or entering your tracking number in the search bar. We provide real-time updates on your shipment's location and status.",
+        "You can track your shipment by visiting our tracking page or entering your tracking number in the search bar. We provide real-time updates on your move's progress and status.",
       rates:
-        "Our shipping rates vary based on distance, weight, and service type. For an accurate quote, please use our online quote calculator or contact our sales team directly.",
+        "Our moving rates vary based on distance, volume, and service type. We offer transparent pricing with no hidden fees. For an accurate quote, please contact us directly or fill out our quote request form.",
       deliveryTime:
-        "Delivery times typically range from 1-5 business days for domestic shipments, depending on the service level and destination. International shipments may take 7-14 business days.",
+        "Local moves typically take 1-2 days, while long-distance moves can take 3-7 days depending on the distance and service level. We'll provide you with a detailed timeline during your consultation.",
       services:
-        "We offer a comprehensive range of logistics services including LTL freight, full truckload, expedited shipping, warehousing, and supply chain solutions. What specific service are you interested in?",
+        "We offer comprehensive moving and logistics services including local residential moving, long-distance moving, office & commercial relocation, packing & unpacking services, logistics & freight delivery, and storage services (coming soon). What specific service are you interested in?",
       contact:
-        "You can reach us at +1 (800) 299-1700 or email us at info@emisnest.com. Our customer service team is available 24/7 to assist you.",
+        "You can reach us at our Toronto office. Contact details will be added soon. Our customer service team is available during business hours to assist you.",
       careers:
         "We're always looking for talented individuals to join our team! Check out our careers page for current openings in driving, dock work, mechanics, and other positions.",
       quote:
-        "To get a quote, you can use our online quote calculator, call us directly, or fill out the quote request form on our website. We'll provide you with a competitive rate quickly.",
+        "To get a free quote, you can call us directly or fill out the quote request form on our website. We'll provide you with a transparent, competitive rate quickly.",
       default:
         "Thank you for your question! I'd be happy to help you with that. Could you please provide more details so I can give you the most accurate information?",
     },

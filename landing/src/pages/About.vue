@@ -16,7 +16,7 @@
           </h1>
           <p class="hero-description" data-aos="fade-up" data-aos-delay="200">
             {{ $t("about.hero.description") }}
-          </p>
+            <!-- </p>
           <div class="hero-stats" data-aos="fade-up" data-aos-delay="300">
             <div class="stat-item">
               <div class="stat-number">15+</div>
@@ -32,13 +32,14 @@
                 {{ $t("about.hero.stats.satisfaction") }}
               </div>
             </div>
-          </div>
+          </div> -->
+          </p>
         </div>
       </div>
     </section>
 
     <!-- Story Section -->
-    <section class="story-section section-padding">
+    <!-- <section class="story-section section-padding">
       <div class="container">
         <div class="row items-center">
           <div class="col-12 col-md-6" data-aos="fade-right">
@@ -98,7 +99,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- Values Section -->
     <section class="values-section section-padding">
@@ -130,9 +131,9 @@
               <div class="value-icon">
                 <q-icon name="favorite" />
               </div>
-              <h3 class="value-title">{{ $t("about.values.care.title") }}</h3>
+              <h3 class="value-title">{{ $t("about.values.trust.title") }}</h3>
               <p class="value-description">
-                {{ $t("about.values.care.description") }}
+                {{ $t("about.values.trust.description") }}
               </p>
             </div>
           </div>
@@ -147,10 +148,10 @@
                 <q-icon name="verified" />
               </div>
               <h3 class="value-title">
-                {{ $t("about.values.reliability.title") }}
+                {{ $t("about.values.efficiency.title") }}
               </h3>
               <p class="value-description">
-                {{ $t("about.values.reliability.description") }}
+                {{ $t("about.values.efficiency.description") }}
               </p>
             </div>
           </div>
@@ -165,10 +166,44 @@
                 <q-icon name="groups" />
               </div>
               <h3 class="value-title">
-                {{ $t("about.values.community.title") }}
+                {{ $t("about.values.innovation.title") }}
               </h3>
               <p class="value-description">
-                {{ $t("about.values.community.description") }}
+                {{ $t("about.values.innovation.description") }}
+              </p>
+            </div>
+          </div>
+          <div
+            class="col-12 col-md-4 q-pa-md"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="value-card">
+              <div class="value-icon">
+                <q-icon name="groups" />
+              </div>
+              <h3 class="value-title">
+                {{ $t("about.values.empathy.title") }}
+              </h3>
+              <p class="value-description">
+                {{ $t("about.values.empathy.description") }}
+              </p>
+            </div>
+          </div>
+          <div
+            class="col-12 col-md-4 q-pa-md"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="value-card">
+              <div class="value-icon">
+                <q-icon name="groups" />
+              </div>
+              <h3 class="value-title">
+                {{ $t("about.values.excellence.title") }}
+              </h3>
+              <p class="value-description">
+                {{ $t("about.values.excellence.description") }}
               </p>
             </div>
           </div>
