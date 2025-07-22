@@ -30,55 +30,51 @@ const routes = [
         meta: { title: "About Us - Emi's Nest" },
       },
       {
-        path: "/careers/driver",
-        component: () => import("pages/Careers/Driver.vue"),
-        meta: { title: "Driver Career - Emi's Nest" },
+        path: "/logistics",
+        component: () => import("src/pages/new/LogisticPage.vue"),
+        meta: { title: "Logistics - Emi's Nest" },
       },
       {
-        path: "/careers/dockworker",
-        component: () => import("pages/Careers/Dockworker.vue"),
-        meta: { title: "Dock Worker Career - Emi's Nest" },
+        path: "/packing-unpacking/storage",
+        component: () =>
+          import("src/pages/new/packingunpacking/StoragePage.vue"),
+        meta: { title: "Storage - Emi's Nest" },
       },
       {
-        path: "/careers/mechanic",
-        component: () => import("pages/Careers/Mechanic.vue"),
-        meta: { title: "Mechanic Career - Emi's Nest" },
+        path: "/blog",
+        component: () => import("src/pages/new/NewsPage.vue"),
+        meta: { title: "Blog - Emi's Nest" },
+      },
+      {
+        path: "/faq",
+        component: () => import("src/pages/new/FaqPage.vue"),
+        meta: { title: "FAQ - Emi's Nest" },
       },
       {
         path: "/legal/privacy-policy",
-        component: () => import("pages/Legal/PrivacyPolicy.vue"),
+        component: () => import("pages/new/Legal/PrivacyPolicy.vue"),
         meta: { title: "Privacy Policy - Emi's Nest" },
       },
       {
         path: "/legal/terms-of-service",
-        component: () => import("pages/Legal/TermsOfService.vue"),
+        component: () => import("pages/new/Legal/TermsOfService.vue"),
         meta: { title: "Terms of Service - Emi's Nest" },
       },
       {
         path: "/legal/cookie-policy",
-        component: () => import("pages/Legal/CookiePolicy.vue"),
+        component: () => import("pages/new/Legal/CookiePolicy.vue"),
         meta: { title: "Cookie Policy - Emi's Nest" },
       },
       {
         path: "/legal/data-security",
-        component: () => import("pages/Legal/DataSecurity.vue"),
+        component: () => import("pages/new/Legal/DataSecurity.vue"),
         meta: { title: "Data Security - Emi's Nest" },
       },
-      {
-        path: "/news",
-        component: () => import("pages/News.vue"),
-        meta: { title: "News - Emi's Nest" },
-      },
-      {
-        path: "/services",
-        component: () => import("pages/Services.vue"),
-        meta: { title: "Services - Emi's Nest" },
-      },
-      {
-        path: "/contact",
-        component: () => import("pages/Contact.vue"),
-        meta: { title: "Contact Us - Emi's Nest" },
-      },
+      // {
+      //   path: "/contact",
+      //   component: () => import("pages/new/Contact.vue"),
+      //   meta: { title: "Contact Us - Emi's Nest" },
+      // },
     ],
   },
 
@@ -86,7 +82,7 @@ const routes = [
   // but you can also remove it
   {
     path: "/:catchAll(.*)*",
-    component: () => import("pages/NotFound.vue"),
+    component: () => import("src/pages/new/NotFound.vue"),
     meta: { title: "Page Not Found - Emi's Nest" },
   },
 ];

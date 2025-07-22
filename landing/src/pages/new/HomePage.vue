@@ -18,258 +18,349 @@
           class="slide-wrapper"
           :style="{ transform: `translateX(-${currentSlide * 100}vw)` }"
         >
-          <!-- Slide 1: AI Sale -->
+          <!-- Slide 1: 2024 National Movers Study -->
           <div class="slide">
             <div class="slide-content">
               <!-- Left Section - Text Content -->
               <div class="text-content">
-                <div class="promo-tag">AI SALE</div>
                 <h1 class="headline">
-                  Get 73% off: Launch online
-                  <span class="highlight">with AI</span> for less
+                  2024 National Movers
+                  <span class="highlight">Study</span>
                 </h1>
 
-                <div class="features-list">
-                  <div class="feature-item">
-                    <i class="fas fa-check"></i>
-                    <span>Free domain</span>
-                    <i class="fas fa-info-circle info-icon"></i>
-                  </div>
-                  <div class="feature-item">
-                    <i class="fas fa-check"></i>
-                    <span>Built-in AI tools and bonus credits</span>
-                  </div>
-                  <div class="feature-item">
-                    <i class="fas fa-check"></i>
-                    <span>24/7 customer support</span>
-                  </div>
-                </div>
-
-                <div class="service-offering">
-                  Hosting + AI Website Builder + AI tools
-                </div>
+                <p class="study-description">
+                  Wondering where Americans moved in 2024 - and why? Uncover the
+                  trends behind U.S. migration in United Van Lines' 48th Annual
+                  National Movers Study.
+                </p>
 
                 <div class="cta-section">
-                  <button class="cta-button">Grab deal</button>
-                  <div class="countdown-timer">
-                    <span class="time-unit">03</span> :
-                    <span class="time-unit">12</span> :
-                    <span class="time-unit">56</span> :
-                    <span class="time-unit">55</span>
-                  </div>
+                  <button class="cta-button">2024 NATIONAL MOVERS STUDY</button>
                 </div>
               </div>
 
-              <!-- Right Section - Visual Content -->
+              <!-- Right Section - US Map -->
               <div class="image-content">
-                <div class="main-illustration">
-                  <div class="person-illustration">
-                    <div class="person-avatar">
-                      <i class="fas fa-user"></i>
+                <div class="us-map-container">
+                  <div class="us-map">
+                    <!-- Map states with different colors -->
+                    <div
+                      class="state light-blue"
+                      style="top: 10%; left: 5%; width: 8%; height: 6%"
+                    >
+                      WA
                     </div>
-                  </div>
-
-                  <!-- Large Text Overlays -->
-                  <div class="sale-text">
-                    <div class="sale-percentage">73%</div>
-                    <div class="sale-label">SALE</div>
-                    <div class="off-tag">OFF</div>
-                  </div>
-
-                  <div class="run-text">RUN</div>
-
-                  <!-- AI Generation UI -->
-                  <div class="ai-generation-ui">
-                    <div class="generation-box">
-                      <i class="fas fa-image"></i>
-                      <span>Generating image...</span>
-                      <div class="loading-bar">
-                        <div class="loading-progress"></div>
-                      </div>
+                    <div
+                      class="state light-blue"
+                      style="top: 12%; left: 8%; width: 6%; height: 8%"
+                    >
+                      ID
                     </div>
-                  </div>
+                    <div
+                      class="state light-blue"
+                      style="top: 10%; left: 15%; width: 12%; height: 6%"
+                    >
+                      MT
+                    </div>
+                    <div
+                      class="state yellow"
+                      style="top: 20%; left: 5%; width: 10%; height: 8%"
+                    >
+                      CA
+                    </div>
+                    <div
+                      class="state yellow"
+                      style="top: 18%; left: 18%; width: 8%; height: 6%"
+                    >
+                      NV
+                    </div>
+                    <div
+                      class="state yellow"
+                      style="top: 8%; left: 25%; width: 6%; height: 8%"
+                    >
+                      ND
+                    </div>
+                    <div
+                      class="state yellow"
+                      style="top: 10%; left: 32%; width: 6%; height: 8%"
+                    >
+                      SD
+                    </div>
+                    <div
+                      class="state yellow"
+                      style="top: 15%; left: 38%; width: 8%; height: 6%"
+                    >
+                      NE
+                    </div>
+                    <div
+                      class="state yellow"
+                      style="top: 20%; left: 45%; width: 6%; height: 8%"
+                    >
+                      KS
+                    </div>
+                    <div
+                      class="state yellow"
+                      style="top: 25%; left: 50%; width: 8%; height: 6%"
+                    >
+                      IL
+                    </div>
+                    <div
+                      class="state yellow"
+                      style="top: 15%; left: 60%; width: 6%; height: 8%"
+                    >
+                      NY
+                    </div>
+                    <div
+                      class="state light-blue"
+                      style="top: 25%; left: 15%; width: 10%; height: 8%"
+                    >
+                      AZ
+                    </div>
+                    <div
+                      class="state light-blue"
+                      style="top: 30%; left: 25%; width: 8%; height: 6%"
+                    >
+                      NM
+                    </div>
+                    <div
+                      class="state light-blue"
+                      style="top: 35%; left: 35%; width: 6%; height: 8%"
+                    >
+                      OK
+                    </div>
+                    <div
+                      class="state light-blue"
+                      style="top: 40%; left: 42%; width: 8%; height: 6%"
+                    >
+                      AR
+                    </div>
+                    <div
+                      class="state light-blue"
+                      style="top: 45%; left: 50%; width: 6%; height: 8%"
+                    >
+                      MS
+                    </div>
+                    <div
+                      class="state light-blue"
+                      style="top: 50%; left: 55%; width: 8%; height: 6%"
+                    >
+                      AL
+                    </div>
+                    <div
+                      class="state light-blue"
+                      style="top: 55%; left: 62%; width: 6%; height: 8%"
+                    >
+                      FL
+                    </div>
+                    <div
+                      class="state light-blue"
+                      style="top: 45%; left: 65%; width: 8%; height: 6%"
+                    >
+                      SC
+                    </div>
+                    <div
+                      class="state light-blue"
+                      style="top: 40%; left: 72%; width: 6%; height: 8%"
+                    >
+                      NC
+                    </div>
+                    <div
+                      class="state light-blue"
+                      style="top: 35%; left: 78%; width: 8%; height: 6%"
+                    >
+                      WV
+                    </div>
+                    <div
+                      class="state light-blue"
+                      style="top: 30%; left: 85%; width: 6%; height: 8%"
+                    >
+                      PA
+                    </div>
+                    <div
+                      class="state light-blue"
+                      style="top: 25%; left: 90%; width: 8%; height: 6%"
+                    >
+                      NJ
+                    </div>
+                    <div
+                      class="state dark-blue"
+                      style="top: 35%; left: 82%; width: 6%; height: 8%"
+                    >
+                      MD
+                    </div>
+                    <div
+                      class="state dark-blue"
+                      style="top: 30%; left: 88%; width: 8%; height: 6%"
+                    >
+                      DE
+                    </div>
+                    <div
+                      class="state dark-blue"
+                      style="top: 40%; left: 78%; width: 6%; height: 8%"
+                    >
+                      VA
+                    </div>
+                    <div
+                      class="state dark-blue"
+                      style="top: 45%; left: 72%; width: 8%; height: 6%"
+                    >
+                      GA
+                    </div>
 
-                  <!-- Percentage Circle -->
-                  <div class="percentage-circle">%</div>
-
-                  <!-- AI Text-to-Website UI -->
-                  <div class="ai-website-ui">
-                    <input
-                      type="text"
-                      placeholder="Create a mobile friendly website about running"
-                      class="website-input"
-                    />
-                    <button class="generate-button">
-                      <i class="fas fa-magic"></i>
-                      Generate
-                    </button>
+                    <!-- Map marker on Maryland -->
+                    <div class="map-marker" style="top: 38%; left: 85%">
+                      <i class="fas fa-map-marker-alt"></i>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Slide 2: AI Tools -->
+          <!-- Slide 2: Virtual Moving Experience -->
           <div class="slide">
             <div class="slide-content">
               <div class="text-content">
-                <div class="promo-tag">AI TOOLS</div>
                 <h1 class="headline">
-                  Create content in
-                  <span class="highlight">seconds</span> not hours
+                  A Simple, Virtual
+                  <span class="highlight">Moving Experience</span>
                 </h1>
 
-                <div class="features-list">
-                  <div class="feature-item">
-                    <i class="fas fa-check"></i>
-                    <span>Generate blog posts, emails & social media</span>
-                  </div>
-                  <div class="feature-item">
-                    <i class="fas fa-check"></i>
-                    <span>Smart SEO optimization included</span>
-                  </div>
-                  <div class="feature-item">
-                    <i class="fas fa-check"></i>
-                    <span>Multi-language support (25+ languages)</span>
-                  </div>
-                </div>
-
-                <div class="service-offering">
-                  AI Writer + SEO Assistant + Content Calendar
-                </div>
+                <p class="study-description">
+                  United Van Lines is pleased to offer our easy, fast and
+                  convenient Virtual Survey. No need to answer the door to get a
+                  quote – just use video chat on your mobile device.
+                </p>
 
                 <div class="cta-section">
-                  <button class="cta-button">Try AI Writer</button>
-                  <div class="countdown-timer">
-                    <span class="time-unit">01</span> :
-                    <span class="time-unit">58</span> :
-                    <span class="time-unit">42</span> :
-                    <span class="time-unit">33</span>
-                  </div>
+                  <button class="cta-button">VIRTUAL MOVING ESTIMATE</button>
                 </div>
               </div>
 
               <div class="image-content">
-                <div class="main-illustration">
-                  <div class="person-illustration">
-                    <div class="person-avatar">
-                      <i class="fas fa-user-tie"></i>
-                    </div>
-                  </div>
+                <div class="virtual-experience-container">
+                  <div class="phone-container">
+                    <div class="smartphone">
+                      <div class="phone-screen">
+                        <!-- Video call interface -->
+                        <div class="video-call-main">
+                          <!-- Living room scene -->
+                          <div class="living-room-scene">
+                            <div class="sofa"></div>
+                            <div class="coffee-table"></div>
+                            <div class="lamp"></div>
+                            <div class="window"></div>
+                            <div class="plant"></div>
+                          </div>
+                        </div>
 
-                  <div class="sale-text">
-                    <div class="sale-percentage">60%</div>
-                    <div class="sale-label">OFF</div>
-                    <div class="off-tag">SAVE</div>
-                  </div>
-
-                  <div class="run-text">FAST</div>
-
-                  <div class="ai-generation-ui">
-                    <div class="generation-box">
-                      <i class="fas fa-pen"></i>
-                      <span>Writing blog post...</span>
-                      <div class="loading-bar">
-                        <div class="loading-progress"></div>
+                        <!-- Picture-in-Picture view -->
+                        <div class="pip-view">
+                          <div class="agent-avatar">
+                            <i class="fas fa-user"></i>
+                          </div>
+                          <div class="headset">
+                            <i class="fas fa-headset"></i>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                  </div>
 
-                  <div class="percentage-circle">AI</div>
-
-                  <div class="ai-website-ui">
-                    <input
-                      type="text"
-                      placeholder="Write a blog post about AI trends in 2024"
-                      class="website-input"
-                    />
-                    <button class="generate-button">
-                      <i class="fas fa-magic"></i>
-                      Generate
-                    </button>
+                    <!-- Hands holding the phone -->
+                    <div class="hands">
+                      <div class="hand left-hand"></div>
+                      <div class="hand right-hand"></div>
+                      <div class="ring"></div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Slide 3: Premium Features -->
+          <!-- Slide 3: House Key Digital Moving Magazine -->
           <div class="slide">
             <div class="slide-content">
               <div class="text-content">
-                <div class="promo-tag">PREMIUM</div>
                 <h1 class="headline">
-                  Go <span class="highlight">pro</span> and scale your business
+                  House Key Digital
+                  <span class="highlight">Moving Magazine</span>
                 </h1>
 
-                <div class="features-list">
-                  <div class="feature-item">
-                    <i class="fas fa-check"></i>
-                    <span>Unlimited AI generations per month</span>
-                  </div>
-                  <div class="feature-item">
-                    <i class="fas fa-check"></i>
-                    <span>Priority 24/7 customer support</span>
-                  </div>
-                  <div class="feature-item">
-                    <i class="fas fa-check"></i>
-                    <span>Advanced analytics & performance insights</span>
-                  </div>
-                </div>
-
-                <div class="service-offering">
-                  Pro Plan + Analytics + Priority Support
-                </div>
+                <p class="study-description">
+                  Discover expert tips on packing, settling in and exploring
+                  your new neighborhood in United Van Lines' digital magazine.
+                </p>
 
                 <div class="cta-section">
-                  <button class="cta-button">Go Pro Now</button>
-                  <div class="countdown-timer">
-                    <span class="time-unit">00</span> :
-                    <span class="time-unit">45</span> :
-                    <span class="time-unit">22</span> :
-                    <span class="time-unit">17</span>
-                  </div>
+                  <button class="cta-button">VIEW THE MAGAZINE</button>
                 </div>
               </div>
 
               <div class="image-content">
-                <div class="main-illustration">
-                  <div class="person-illustration">
-                    <div class="person-avatar">
-                      <i class="fas fa-user-graduate"></i>
-                    </div>
-                  </div>
+                <div class="magazine-container">
+                  <!-- Background gradient -->
+                  <div class="magazine-bg"></div>
 
-                  <div class="sale-text">
-                    <div class="sale-percentage">40%</div>
-                    <div class="sale-label">OFF</div>
-                    <div class="off-tag">PRO</div>
-                  </div>
+                  <!-- Tablet Device -->
+                  <div class="tablet-device">
+                    <div class="tablet-screen">
+                      <!-- Magazine Cover -->
+                      <div class="magazine-cover">
+                        <div class="cover-title">
+                          <h2>House Key</h2>
+                          <p>A digital magazine about people on the move</p>
+                        </div>
 
-                  <div class="run-text">PRO</div>
+                        <div class="cover-image">
+                          <div class="cover-person">
+                            <div class="person-hair"></div>
+                            <div class="person-face"></div>
+                            <div class="person-shirt"></div>
+                            <div class="person-phone"></div>
+                          </div>
+                          <div class="cover-couch"></div>
+                        </div>
 
-                  <div class="ai-generation-ui">
-                    <div class="generation-box">
-                      <i class="fas fa-chart-line"></i>
-                      <span>Analyzing performance...</span>
-                      <div class="loading-bar">
-                        <div class="loading-progress"></div>
+                        <div class="cover-articles">
+                          <div class="article-item">
+                            Your Move, Your Adventure
+                          </div>
+                          <div class="article-item">A First for Everything</div>
+                          <div class="article-item">Protect What Matters</div>
+                          <div class="article-item">Surviving Summer Heat</div>
+                          <div class="article-item">The Where and Why</div>
+                        </div>
                       </div>
                     </div>
                   </div>
 
-                  <div class="percentage-circle">★</div>
-
-                  <div class="ai-website-ui">
-                    <input
-                      type="text"
-                      placeholder="Generate monthly performance report"
-                      class="website-input"
-                    />
-                    <button class="generate-button">
-                      <i class="fas fa-magic"></i>
-                      Analyze
-                    </button>
+                  <!-- Smartphone Device -->
+                  <div class="phone-device">
+                    <div class="phone-screen">
+                      <!-- Magazine Article Page -->
+                      <div class="article-page">
+                        <h3 class="article-title">Moving Toward Family</h3>
+                        <p class="article-text">
+                          Moving trends and statistics show that many people are
+                          relocating closer to family, with job transfers and
+                          lifestyle changes also playing significant roles in
+                          relocation decisions.
+                        </p>
+                        <div class="statistic">
+                          <div class="stat-number">66%</div>
+                          <div class="stat-label">
+                            PERCENT OF INBOUND MOVES WITHIN THE 2024 MOVERS
+                            STUDY
+                          </div>
+                        </div>
+                        <div class="thumbnail-gallery">
+                          <div class="thumbnail"></div>
+                          <div class="thumbnail"></div>
+                          <div class="thumbnail"></div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -892,28 +983,25 @@ export default {
   color: #000000;
 }
 
-.promo-tag {
-  display: inline-block;
-  background: #32cd32;
-  color: #000000;
-  padding: 8px 16px;
-  border-radius: 20px;
-  font-size: 0.9rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  margin-bottom: 1.5rem;
-}
-
 .headline {
   font-size: 3.5rem;
   font-weight: bold;
-  color: #000000;
+  color: #1e3a8a;
   line-height: 1.1;
   margin-bottom: 2rem;
 }
 
 .highlight {
-  color: #8a2be2;
+  color: #1e3a8a;
+  margin-left: 2rem;
+}
+
+.study-description {
+  font-size: 1.2rem;
+  color: #666666;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  max-width: 500px;
 }
 
 .features-list {
@@ -954,9 +1042,9 @@ export default {
 }
 
 .cta-button {
-  background: #333333;
-  border: none;
-  color: white;
+  background: transparent;
+  border: 2px solid #60a5fa;
+  color: #60a5fa;
   padding: 15px 30px;
   font-size: 1rem;
   font-weight: bold;
@@ -968,9 +1056,10 @@ export default {
 }
 
 .cta-button:hover {
-  background: #555555;
+  background: #60a5fa;
+  color: white;
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(96, 165, 250, 0.3);
 }
 
 .countdown-timer {
@@ -991,7 +1080,7 @@ export default {
   text-align: center;
 }
 
-/* Right Section - Visual Content */
+/* Right Section - US Map */
 .image-content {
   flex: 0 0 50%;
   position: relative;
@@ -1001,7 +1090,7 @@ export default {
   justify-content: center;
 }
 
-.main-illustration {
+.us-map-container {
   position: relative;
   width: 100%;
   height: 100%;
@@ -1010,173 +1099,505 @@ export default {
   justify-content: center;
 }
 
-.person-illustration {
+.us-map {
   position: relative;
-  z-index: 2;
+  width: 80%;
+  height: 80%;
+  background: #f8f9fa;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 }
 
-.person-avatar {
-  width: 120px;
-  height: 120px;
-  background: linear-gradient(135deg, #8a2be2, #32cd32);
+.state {
+  position: absolute;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.state.light-blue {
+  background: #60a5fa;
+}
+
+.state.yellow {
+  background: #fbbf24;
+}
+
+.state.dark-blue {
+  background: #1e3a8a;
+}
+
+.state.gray {
+  background: #9ca3af;
+}
+
+.state.dark-gray {
+  background: #6b7280;
+}
+
+.map-marker {
+  position: absolute;
+  color: #1e3a8a;
+  font-size: 1.5rem;
+  z-index: 10;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.map-marker i {
+  background: white;
+  border-radius: 50%;
+  padding: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Virtual Moving Experience Styles */
+.virtual-experience-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.phone-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.smartphone {
+  width: 280px;
+  height: 560px;
+  background: #ffffff;
+  border-radius: 30px;
+  border: 8px solid #333333;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.phone-screen {
+  width: 100%;
+  height: 100%;
+  background: #000000;
+  position: relative;
+  overflow: hidden;
+}
+
+.video-call-main {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: #f8f9fa;
+}
+
+.living-room-scene {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: linear-gradient(135deg, #e9ecef 0%, #f8f9fa 100%);
+}
+
+.sofa {
+  position: absolute;
+  bottom: 20%;
+  left: 10%;
+  width: 60%;
+  height: 15%;
+  background: #6c757d;
+  border-radius: 8px 8px 0 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.coffee-table {
+  position: absolute;
+  bottom: 35%;
+  left: 25%;
+  width: 30%;
+  height: 8%;
+  background: #495057;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.lamp {
+  position: absolute;
+  top: 15%;
+  right: 15%;
+  width: 8%;
+  height: 20%;
+  background: #dee2e6;
+  border-radius: 50% 50% 0 0;
+}
+
+.lamp::after {
+  content: "";
+  position: absolute;
+  top: -10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120%;
+  height: 15%;
+  background: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+}
+
+.window {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 25%;
+  height: 30%;
+  background: #87ceeb;
+  border: 2px solid #ffffff;
+  border-radius: 4px;
+}
+
+.window::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 15px,
+    #ffffff 15px,
+    #ffffff 17px
+  );
+}
+
+.plant {
+  position: absolute;
+  bottom: 15%;
+  right: 10%;
+  width: 12%;
+  height: 25%;
+  background: #28a745;
+  border-radius: 50% 50% 0 0;
+}
+
+.plant::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 20%;
+  background: #8b4513;
+  border-radius: 4px;
+}
+
+.pip-view {
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+  width: 25%;
+  height: 20%;
+  background: #ffffff;
+  border-radius: 8px;
+  border: 2px solid #60a5fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.agent-avatar {
+  width: 60%;
+  height: 60%;
+  background: #60a5fa;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
-  font-size: 3rem;
-  box-shadow: 0 8px 24px rgba(138, 43, 226, 0.3);
-}
-
-.sale-text {
-  position: absolute;
-  bottom: 20%;
-  left: 10%;
-  z-index: 3;
-}
-
-.sale-percentage {
-  font-size: 4rem;
-  font-weight: bold;
-  color: #8a2be2;
-  line-height: 1;
-}
-
-.sale-label {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #8a2be2;
-  margin-top: -10px;
-}
-
-.off-tag {
-  position: absolute;
-  top: -10px;
-  right: -20px;
-  background: #32cd32;
-  color: #000000;
-  padding: 4px 8px;
-  border-radius: 12px;
-  font-size: 0.8rem;
-  font-weight: bold;
-}
-
-.run-text {
-  position: absolute;
-  top: 20%;
-  right: 15%;
-  font-size: 3rem;
-  font-weight: bold;
-  color: #ffffff;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  opacity: 0.8;
-}
-
-.ai-generation-ui {
-  position: absolute;
-  top: 30%;
-  left: 20%;
-  z-index: 4;
-}
-
-.generation-box {
-  background: rgba(255, 255, 255, 0.9);
-  padding: 15px 20px;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(10px);
-}
-
-.generation-box i {
-  color: #8a2be2;
   font-size: 1.2rem;
+  position: relative;
 }
 
-.loading-bar {
-  width: 60px;
-  height: 4px;
-  background: #e0e0e0;
-  border-radius: 2px;
-  overflow: hidden;
-}
-
-.loading-progress {
-  width: 60%;
-  height: 100%;
-  background: #32cd32;
-  animation: loading 2s ease-in-out infinite;
-}
-
-@keyframes loading {
-  0%,
-  100% {
-    width: 30%;
-  }
-  50% {
-    width: 80%;
-  }
-}
-
-.percentage-circle {
+.headset {
   position: absolute;
-  top: 10%;
-  right: 10%;
-  width: 80px;
-  height: 80px;
-  background: #32cd32;
+  top: -5px;
+  right: -5px;
+  color: #333333;
+  font-size: 0.8rem;
+}
+
+.hands {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.hand {
+  position: absolute;
+  background: #f4a460;
   border-radius: 50%;
+}
+
+.left-hand {
+  width: 80px;
+  height: 120px;
+  bottom: -20px;
+  left: -30px;
+  transform: rotate(-15deg);
+}
+
+.right-hand {
+  width: 70px;
+  height: 110px;
+  bottom: -15px;
+  right: -25px;
+  transform: rotate(15deg);
+}
+
+.ring {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: #ffd700;
+  border-radius: 50%;
+  bottom: 20px;
+  left: -15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* House Key Magazine Styles */
+.magazine-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #000000;
-  font-size: 2rem;
-  font-weight: bold;
-  box-shadow: 0 4px 12px rgba(50, 205, 50, 0.3);
 }
 
-.ai-website-ui {
+.magazine-bg {
   position: absolute;
-  bottom: 20%;
-  right: 10%;
-  z-index: 4;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #e0f2fe 0%, #dcfce7 100%);
+  border-radius: 12px;
 }
 
-.website-input {
-  background: white;
-  border: 2px solid #e0e0e0;
-  padding: 12px 16px;
-  border-radius: 8px;
-  width: 280px;
-  font-size: 0.9rem;
-  margin-bottom: 10px;
-  outline: none;
-  transition: border-color 0.3s ease;
+.tablet-device {
+  position: absolute;
+  left: 20%;
+  top: 50%;
+  transform: translateY(-50%) rotate(-5deg);
+  width: 300px;
+  height: 400px;
+  background: #d1d5db;
+  border-radius: 20px;
+  border: 8px solid #9ca3af;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  z-index: 3;
 }
 
-.website-input:focus {
-  border-color: #8a2be2;
+.tablet-screen {
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
 }
 
-.generate-button {
-  background: #e6e6fa;
-  border: none;
-  color: #333333;
-  padding: 10px 16px;
-  border-radius: 8px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s ease;
+.magazine-cover {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+  padding: 20px;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+}
+
+.cover-title h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.cover-title p {
+  font-size: 0.9rem;
+  margin: 5px 0 0 0;
+  opacity: 0.9;
+}
+
+.cover-image {
+  position: relative;
+  height: 40%;
+  margin: 20px 0;
+}
+
+.cover-person {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  width: 60%;
+  height: 60%;
+}
+
+.person-hair {
+  position: absolute;
+  top: 0;
+  left: 20%;
+  width: 60%;
+  height: 30%;
+  background: #a0522d;
+  border-radius: 50% 50% 0 0;
+}
+
+.person-face {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  width: 50%;
+  height: 40%;
+  background: #f4a460;
+  border-radius: 50%;
+}
+
+.person-shirt {
+  position: absolute;
+  top: 60%;
+  left: 15%;
+  width: 70%;
+  height: 40%;
+  background: #fbbf24;
+  border-radius: 20px 20px 0 0;
+}
+
+.person-phone {
+  position: absolute;
+  top: 70%;
+  left: 60%;
+  width: 15%;
+  height: 25%;
+  background: #28a745;
+  border-radius: 4px;
+}
+
+.cover-couch {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  background: #0ea5e9;
+  border-radius: 20px 20px 0 0;
+}
+
+.cover-articles {
+  display: flex;
+  flex-direction: column;
   gap: 8px;
 }
 
-.generate-button:hover {
-  background: #d4d4f7;
-  transform: translateY(-1px);
+.article-item {
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 4px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.phone-device {
+  position: absolute;
+  right: 15%;
+  top: 50%;
+  transform: translateY(-50%) rotate(10deg);
+  width: 180px;
+  height: 320px;
+  background: #d1d5db;
+  border-radius: 15px;
+  border: 6px solid #9ca3af;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  z-index: 2;
+}
+
+.phone-screen {
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  border-radius: 9px;
+  overflow: hidden;
+  padding: 15px;
+}
+
+.article-page {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.article-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #1e3a8a;
+  margin: 0 0 10px 0;
+  line-height: 1.3;
+}
+
+.article-text {
+  font-size: 0.8rem;
+  color: #666666;
+  line-height: 1.4;
+  margin: 0 0 20px 0;
+}
+
+.statistic {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1e3a8a;
+  margin-bottom: 5px;
+}
+
+.stat-label {
+  font-size: 0.7rem;
+  color: #666666;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.thumbnail-gallery {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: auto;
+}
+
+.thumbnail {
+  width: 40px;
+  height: 30px;
+  background: linear-gradient(135deg, #60a5fa, #3b82f6);
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Navigation Arrows */
@@ -1265,6 +1686,14 @@ export default {
     font-size: 2.5rem;
   }
 
+  .highlight {
+    margin-left: 0;
+  }
+
+  .study-description {
+    max-width: 100%;
+  }
+
   .nav-arrow {
     display: none;
   }
@@ -1273,6 +1702,28 @@ export default {
     flex-direction: column;
     gap: 15px;
   }
+
+  .us-map {
+    width: 90%;
+    height: 90%;
+  }
+
+  .smartphone {
+    width: 240px;
+    height: 480px;
+  }
+
+  .tablet-device {
+    width: 250px;
+    height: 330px;
+    left: 15%;
+  }
+
+  .phone-device {
+    width: 150px;
+    height: 270px;
+    right: 10%;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1280,20 +1731,49 @@ export default {
     font-size: 2rem;
   }
 
-  .sale-percentage {
-    font-size: 3rem;
+  .study-description {
+    font-size: 1.1rem;
   }
 
-  .sale-label {
-    font-size: 1.5rem;
+  .us-map {
+    width: 95%;
+    height: 95%;
   }
 
-  .website-input {
-    width: 240px;
+  .state {
+    font-size: 0.6rem;
+  }
+
+  .map-marker {
+    font-size: 1.2rem;
   }
 
   .carousel-dots {
     bottom: 20px;
+  }
+
+  .tablet-device {
+    width: 200px;
+    height: 270px;
+    left: 10%;
+  }
+
+  .phone-device {
+    width: 120px;
+    height: 220px;
+    right: 5%;
+  }
+
+  .cover-title h2 {
+    font-size: 1.8rem;
+  }
+
+  .article-title {
+    font-size: 1rem;
+  }
+
+  .stat-number {
+    font-size: 1.5rem;
   }
 }
 

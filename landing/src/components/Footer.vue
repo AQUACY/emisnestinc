@@ -62,11 +62,15 @@
           <!-- Right Column -->
           <div class="nav-column">
             <a href="#" class="nav-link">DRIVE FOR UNITED VAN LINES</a>
-            <a href="#" class="nav-link">LOGISTICS</a>
-            <a href="#" class="nav-link">DATA SECURITY POLICY</a>
-            <a href="#" class="nav-link">PRIVACY POLICY</a>
-            <a href="#" class="nav-link">TERMS & CONDITIONS</a>
-            <a href="#" class="nav-link"
+            <a href="/logistics" class="nav-link">LOGISTICS</a>
+            <a href="/legal/data-security-policy" class="nav-link"
+              >DATA SECURITY POLICY</a
+            >
+            <a href="/legal/privacy-policy" class="nav-link">PRIVACY POLICY</a>
+            <a href="/legal/terms-of-service" class="nav-link"
+              >TERMS & CONDITIONS</a
+            >
+            <a href="/legal/do-not-sell-or-share" class="nav-link"
               >DO NOT SELL OR SHARE MY PERSONAL INFORMATION</a
             >
             <a href="#" class="nav-link">SITEMAP</a>

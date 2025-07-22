@@ -8,10 +8,13 @@
           <!-- Logo Section -->
           <div class="logo-section">
             <div class="logo-container">
-              <div class="brand-text">
-                <h1 class="brand-name">Emi's Nest</h1>
-                <p class="brand-tagline">Moving & Logistics</p>
-              </div>
+              <RouterLink to="/" class="logo-link">
+                <img
+                  src="../assets/emisnest-logo.png"
+                  alt="Emi's Nest Logo"
+                  class="logo-image"
+                />
+              </RouterLink>
             </div>
           </div>
 
@@ -70,7 +73,11 @@
                   >
                 </div>
 
-                <div class="dropdown-item">STORAGE SOLUTIONS</div>
+                <div class="dropdown-item">
+                  <RouterLink to="/packing-unpacking/storage"
+                    >STORAGE SOLUTIONS</RouterLink
+                  >
+                </div>
               </div>
             </div>
 
@@ -91,12 +98,12 @@
 
               <!-- Resources Dropdown -->
               <div class="dropdown-menu" v-if="activeDropdown === 'resources'">
-                <div class="dropdown-item">MOVING CHECKLIST</div>
-                <div class="dropdown-item">COST CALCULATOR</div>
-                <div class="dropdown-item">MOVING TIPS</div>
-                <div class="dropdown-item">FAQ</div>
-                <div class="dropdown-item">BLOG</div>
-                <div class="dropdown-item">VIDEO GUIDES</div>
+                <div class="dropdown-item">
+                  <RouterLink to="/faq">FAQ</RouterLink>
+                </div>
+                <div class="dropdown-item">
+                  <RouterLink to="/blog">BLOG</RouterLink>
+                </div>
               </div>
             </div>
 
@@ -133,7 +140,13 @@
         <!-- Mobile Header -->
         <div class="mobile-header">
           <div class="mobile-logo">
-            <h1 class="mobile-brand-name">Emi's Nest</h1>
+            <RouterLink to="/" class="mobile-logo-link">
+              <img
+                src="../assets/emisnest-logo.png"
+                alt="Emi's Nest Logo"
+                class="mobile-logo-image"
+              />
+            </RouterLink>
           </div>
           <div class="mobile-menu-btn" @click="toggleMobileMenu">
             <div class="hamburger-icon">
@@ -154,9 +167,13 @@
             <!-- Mobile Header -->
             <div class="mobile-nav-header">
               <div class="mobile-logo">
-                <div class="brand-text-mobile">
-                  <h1 class="brand-name-mobile">Emi's Nest</h1>
-                </div>
+                <RouterLink to="/" class="mobile-nav-logo-link">
+                  <img
+                    src="../assets/emisnest-logo.png"
+                    alt="Emi's Nest Logo"
+                    class="mobile-nav-logo-image"
+                  />
+                </RouterLink>
               </div>
               <div class="mobile-close-btn" @click="closeMobileMenu">
                 <span>&times;</span>
@@ -214,12 +231,16 @@
                 />
               </div>
               <div class="mobile-dropdown" v-if="mobileDropdowns.moving">
-                <div class="mobile-dropdown-item">LONG DISTANCE MOVERS</div>
-                <div class="mobile-dropdown-item">LOCAL MOVERS</div>
-                <div class="mobile-dropdown-item">SNAPMOVES℠ BY UNITED</div>
-                <div class="mobile-dropdown-item">INTERNATIONAL MOVERS</div>
-                <div class="mobile-dropdown-item">CAR SHIPPING SERVICES</div>
-                <div class="mobile-dropdown-item">MILITARY MOVERS</div>
+                <div class="mobile-dropdown-item">
+                  <RouterLink to="/moving-service/long-distance"
+                    >LONG DISTANCE MOVERS</RouterLink
+                  >
+                </div>
+                <div class="mobile-dropdown-item">
+                  <RouterLink to="/moving-service/local-movers"
+                    >LOCAL MOVERS</RouterLink
+                  >
+                </div>
               </div>
 
               <div
@@ -236,12 +257,16 @@
                 />
               </div>
               <div class="mobile-dropdown" v-if="mobileDropdowns.packing">
-                <div class="mobile-dropdown-item">PACKING SERVICES</div>
-                <div class="mobile-dropdown-item">UNPACKING SERVICES</div>
-                <div class="mobile-dropdown-item">STORAGE SOLUTIONS</div>
-                <div class="mobile-dropdown-item">FURNITURE PROTECTION</div>
-                <div class="mobile-dropdown-item">SPECIALTY ITEMS</div>
-                <div class="mobile-dropdown-item">MOVING SUPPLIES</div>
+                <div class="mobile-dropdown-item">
+                  <RouterLink to="/packing-unpacking/packing-services"
+                    >PACKING & UNPACKING SERVICES</RouterLink
+                  >
+                </div>
+                <div class="mobile-dropdown-item">
+                  <RouterLink to="/packing-unpacking/storage"
+                    >STORAGE SOLUTIONS</RouterLink
+                  >
+                </div>
               </div>
 
               <div
@@ -258,24 +283,16 @@
                 />
               </div>
               <div class="mobile-dropdown" v-if="mobileDropdowns.resources">
-                <div class="mobile-dropdown-item">MOVING CHECKLIST</div>
-                <div class="mobile-dropdown-item">COST CALCULATOR</div>
-                <div class="mobile-dropdown-item">MOVING TIPS</div>
-                <div class="mobile-dropdown-item">FAQ</div>
-                <div class="mobile-dropdown-item">BLOG</div>
-                <div class="mobile-dropdown-item">VIDEO GUIDES</div>
+                <div class="mobile-dropdown-item">
+                  <RouterLink to="/faq">FAQ</RouterLink>
+                </div>
+                <div class="mobile-dropdown-item">
+                  <RouterLink to="/blog">BLOG</RouterLink>
+                </div>
               </div>
 
               <div class="mobile-nav-item">
-                <span>CORPORATE SERVICES</span>
-              </div>
-
-              <div class="mobile-nav-item">
-                <span>SIGN IN TO MYUNITED</span>
-              </div>
-
-              <div class="mobile-nav-item">
-                <span>LOCATIONS</span>
+                <RouterLink to="/about-us">ABOUT US</RouterLink>
               </div>
             </div>
           </div>
@@ -373,18 +390,49 @@ export default {
   gap: 12px;
 }
 
+.logo-image {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+}
+
+.logo-link {
+  display: block;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
 // Mobile Logo
 .mobile-logo {
   flex: 0 0 auto;
 }
 
-.mobile-brand-name {
-  font-family: "Arial", sans-serif;
-  font-size: 20px;
-  font-weight: bold;
-  color: #1e3a8a;
-  margin: 0;
-  line-height: 1;
+.mobile-logo-image {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+
+.mobile-nav-logo-image {
+  height: 35px;
+  width: auto;
+  object-fit: contain;
+}
+
+.mobile-logo-link,
+.mobile-nav-logo-link {
+  padding-top: 20px;
+  display: block;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 0.8;
+  }
 }
 
 .eagle-graphic {
@@ -402,30 +450,6 @@ export default {
   height: 12px;
   border-radius: 50% 50% 50% 0;
   z-index: 3;
-}
-
-.brand-text {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-
-.brand-name {
-  font-family: "Arial", sans-serif;
-  font-size: 24px;
-  font-weight: bold;
-  color: #1e3a8a;
-  margin: 0;
-  line-height: 1;
-}
-
-.brand-tagline {
-  font-family: "Arial", sans-serif;
-  font-size: 14px;
-  font-weight: normal;
-  color: #1e3a8a;
-  margin: 0;
-  line-height: 1;
 }
 
 // Navigation Menu
@@ -502,6 +526,28 @@ export default {
   &:hover {
     background-color: #f9fafb;
     color: #1e3a8a;
+  }
+
+  // Style RouterLink components inside dropdown items
+  a {
+    color: inherit;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: #1e3a8a;
+    }
+
+    &:visited {
+      color: inherit;
+    }
+
+    &:active {
+      color: #1e3a8a;
+    }
   }
 }
 
@@ -712,14 +758,6 @@ export default {
   background: linear-gradient(90deg, #60a5fa, #93c5fd);
 }
 
-.brand-name-mobile {
-  font-family: "Arial", sans-serif;
-  font-size: 20px;
-  font-weight: bold;
-  color: #1e3a8a;
-  margin: 0;
-}
-
 .mobile-close-btn {
   cursor: pointer;
   font-size: 24px;
@@ -824,6 +862,28 @@ export default {
   &:hover {
     background-color: #f3f4f6;
   }
+
+  // Style any RouterLink components in mobile dropdown items
+  a {
+    color: inherit;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: #1e3a8a;
+    }
+
+    &:visited {
+      color: inherit;
+    }
+
+    &:active {
+      color: #1e3a8a;
+    }
+  }
 }
 
 // Mobile responsive styles
@@ -858,6 +918,25 @@ export default {
     span {
       height: 2px;
     }
+  }
+}
+
+// Global RouterLink styling
+:deep(a) {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: #1e3a8a;
+  }
+
+  &:visited {
+    color: inherit;
+  }
+
+  &:active {
+    color: #1e3a8a;
   }
 }
 </style>
