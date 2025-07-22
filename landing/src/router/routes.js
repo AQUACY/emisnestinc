@@ -9,8 +9,24 @@ const routes = [
         meta: { title: "Home - Emi's Nest" },
       },
       {
-        path: "/about",
-        component: () => import("pages/About.vue"),
+        path: "/moving-service/long-distance",
+        component: () => import("src/pages/new/MovingService/LongDistance.vue"),
+        meta: { title: "Long Distance Movers - Emi's Nest" },
+      },
+      {
+        path: "/moving-service/local-movers",
+        component: () => import("src/pages/new/MovingService/LocalMovers.vue"),
+        meta: { title: "Local Movers - Emi's Nest" },
+      },
+      {
+        path: "/packing-unpacking/packing-services",
+        component: () =>
+          import("src/pages/new/packingunpacking/PackingAndUnpacking.vue"),
+        meta: { title: "Packing and Unpacking - Emi's Nest" },
+      },
+      {
+        path: "/about-us",
+        component: () => import("src/pages/new/AboutUs.vue"),
         meta: { title: "About Us - Emi's Nest" },
       },
       {

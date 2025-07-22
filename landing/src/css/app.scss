@@ -139,61 +139,61 @@ body {
   color: var(--xpo-grey-medium);
 }
 
-// Hero section styles
-.hero-section {
-  position: relative;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
+// // Hero section styles
+// .hero-section {
+//   position: relative;
+//   min-height: 100vh;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   overflow: hidden;
+// }
 
-.hero-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  filter: grayscale(50%);
-}
+// .hero-background {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   bottom: 0;
+//   background-size: cover;
+//   background-position: center;
+//   background-attachment: fixed;
+//   filter: grayscale(50%);
+// }
 
-.hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-}
+// .hero-overlay {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   bottom: 0;
+//   background: rgba(0, 0, 0, 0.5);
+// }
 
-.hero-content {
-  position: relative;
-  z-index: 2;
-  width: 100%;
-}
+// .hero-content {
+//   position: relative;
+//   z-index: 2;
+//   width: 100%;
+// }
 
-.hero-title {
-  font-size: 4rem;
-  font-weight: 900;
-  color: var(--text-light);
-  margin-bottom: 2rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
+// .hero-title {
+//   font-size: 4rem;
+//   font-weight: 900;
+//   color: var(--text-light);
+//   margin-bottom: 2rem;
+//   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+// }
 
-.hero-description {
-  font-size: 1.25rem;
-  color: var(--text-light);
-  margin-bottom: 3rem;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-  line-height: 1.6;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-}
+// .hero-description {
+//   font-size: 1.25rem;
+//   color: var(--text-light);
+//   margin-bottom: 3rem;
+//   max-width: 800px;
+//   margin-left: auto;
+//   margin-right: auto;
+//   line-height: 1.6;
+//   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+// }
 
 // Award badge styles
 .award-badge {

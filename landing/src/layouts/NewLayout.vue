@@ -2,7 +2,7 @@
   <div id="app">
     <q-layout view="hHh lpR fFf">
       <!-- Header matching United Van Lines design -->
-      <q-header elevated class="united-header">
+      <q-header class="united-header">
         <!-- Desktop Header -->
         <div class="header-container desktop-header">
           <!-- Logo Section -->
@@ -34,12 +34,16 @@
 
               <!-- Moving Services Dropdown -->
               <div class="dropdown-menu" v-if="activeDropdown === 'moving'">
-                <div class="dropdown-item">LONG DISTANCE MOVERS</div>
-                <div class="dropdown-item">LOCAL MOVERS</div>
-                <div class="dropdown-item">SNAPMOVES℠ BY UNITED</div>
-                <div class="dropdown-item">INTERNATIONAL MOVERS</div>
-                <div class="dropdown-item">CAR SHIPPING SERVICES</div>
-                <div class="dropdown-item">MILITARY MOVERS</div>
+                <div class="dropdown-item">
+                  <RouterLink to="/moving-service/long-distance"
+                    >LONG DISTANCE MOVERS</RouterLink
+                  >
+                </div>
+                <div class="dropdown-item">
+                  <RouterLink to="/moving-service/local-movers"
+                    >LOCAL MOVERS</RouterLink
+                  >
+                </div>
               </div>
             </div>
 
@@ -60,12 +64,13 @@
 
               <!-- Packing and More Dropdown -->
               <div class="dropdown-menu" v-if="activeDropdown === 'packing'">
-                <div class="dropdown-item">PACKING SERVICES</div>
-                <div class="dropdown-item">UNPACKING SERVICES</div>
+                <div class="dropdown-item">
+                  <RouterLink to="/packing-unpacking/packing-services"
+                    >PACKING & UNPACKING SERVICES</RouterLink
+                  >
+                </div>
+
                 <div class="dropdown-item">STORAGE SOLUTIONS</div>
-                <div class="dropdown-item">FURNITURE PROTECTION</div>
-                <div class="dropdown-item">SPECIALTY ITEMS</div>
-                <div class="dropdown-item">MOVING SUPPLIES</div>
               </div>
             </div>
 
@@ -112,12 +117,9 @@
 
               <!-- Corporate Services Dropdown -->
               <div class="dropdown-menu" v-if="activeDropdown === 'corporate'">
-                <div class="dropdown-item">EMPLOYEE RELOCATION</div>
-                <div class="dropdown-item">OFFICE MOVES</div>
-                <div class="dropdown-item">WAREHOUSE RELOCATION</div>
-                <div class="dropdown-item">INTERNATIONAL SHIPPING</div>
-                <div class="dropdown-item">LOGISTICS SOLUTIONS</div>
-                <div class="dropdown-item">CONSULTING SERVICES</div>
+                <div class="dropdown-item">
+                  <RouterLink to="/about-us">ABOUT US</RouterLink>
+                </div>
               </div>
             </div>
           </div>
@@ -278,13 +280,9 @@
             </div>
           </div>
         </div>
-
-        <!-- Blue gradient strip at bottom -->
-        <div class="blue-gradient-strip"></div>
       </q-header>
-
       <!-- Page Content -->
-      <q-page-container>
+      <q-page-container style="padding-top: 0px; margin-top: -20px">
         <router-view />
       </q-page-container>
     </q-layout>
@@ -292,6 +290,7 @@
 </template>
 
 <script>
+import { RouterLink } from "vue-router";
 export default {
   name: "NewLayout",
   data() {
@@ -338,7 +337,7 @@ export default {
 <style lang="scss" scoped>
 .united-header {
   background-color: #ffffff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  // box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: relative;
 }
 
@@ -401,40 +400,8 @@ export default {
   transform: translateY(-50%);
   width: 12px;
   height: 12px;
-  background: linear-gradient(135deg, #1e3a8a, #3b82f6);
   border-radius: 50% 50% 50% 0;
   z-index: 3;
-}
-
-.eagle-wings {
-  position: absolute;
-  left: 8px;
-  top: 50%;
-  transform: translateY(-50%);
-  display: flex;
-  gap: 2px;
-}
-
-.wing {
-  width: 8px;
-  height: 20px;
-  border-radius: 0 50% 50% 0;
-  background: linear-gradient(90deg, #1e3a8a, #3b82f6, #60a5fa);
-}
-
-.wing-1 {
-  height: 16px;
-  background: linear-gradient(90deg, #1e3a8a, #3b82f6);
-}
-
-.wing-2 {
-  height: 20px;
-  background: linear-gradient(90deg, #3b82f6, #60a5fa);
-}
-
-.wing-3 {
-  height: 14px;
-  background: linear-gradient(90deg, #60a5fa, #93c5fd);
 }
 
 .brand-text {
